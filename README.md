@@ -50,12 +50,6 @@ project's **Settings**.
 
 Read more about [user/group Pages][userpages] and [project Pages][projpages].
 
-## Did you fork this project?
-
-If you forked this project for your own use, please go to your project's
-**Settings** and remove the forking relationship, which won't be necessary
-unless you want to contribute back to the upstream project.
-
 ## Troubleshooting
 
 1. CSS is missing! That means that you have wrongly set up the CSS URL in your
