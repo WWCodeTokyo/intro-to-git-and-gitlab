@@ -25,19 +25,26 @@
 		<div class="reveal">
 			<div class="slides">
 				<!-- Slide 1 -->
-				<section>Intro Slide - add logos</section>
+				<section>
+					<h2>Intro to Git &amp; GitLab</h2>
+					<div>
+						<img src="images/git-gitlab-logos.png" alt="Git Logo" height="300" width="auto"> 
+					</div>
+				</section>
 				<!-- Slide 2 -->
 				<section>
 					<h3>What is Git?</h3>
 					<p class="center fragment fade-in">Git is a <span class="u-orange">version Control</span> system for tracking changes in computer files</p> 
 				</section>
-				<aside class="notes"> Git allows you to coordinate work on files among multiple people. Git and GitLab are different things, more on GitLab in just a bit!</aside>
+				<aside class="notes">
+					Git allows you to coordinate work on files among multiple people. Git and GitLab are different things, more on GitLab in just a bit!
+				</aside>
 				<!-- Slide 3 -->
 				<section>
 					<h3>Why do we need it?</h3>
 					<iframe src="https://giphy.com/embed/3ohA2Y2E06tLJEFAn6" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 					<aside class="notes">
-						Because we all make mistakes! 
+						We all make mistakes! 
 						Ever use the 'save as' feature so you can keep a copy of the original just in case? That is a form of version control. 
 					</aside>
 				</section>
@@ -58,15 +65,17 @@
 							<td><p>Every change is tracked</p></td>
 						</tr>
 					</table>
-						<aside class="notes">Version control allows you to time travel back through previous versions of your code. It also allows you to introduce changes from different people without losing that files history. Each person on the team has their own copy with all the history.</aside>
+						<aside class="notes">
+							Version control allows you to time travel back through previous versions of your code. It also allows you to introduce changes from different people without losing that files history. Each person on the team has their copy of all the history.
+						</aside>
 				</section>
 				<!-- Slide 5 -->
 				<section>
 					<h3>The Lingo!</h3>
 					<table>
 						<tr class="fragment fade-left">
-							<td class="u-orange"><h4>Repository<br>(aka: repo)</h4></td>
-							<td><p>The database where your files are stored and managed</p></td>
+							<td class="u-orange"><h4>Repository</h4></td>
+							<td><p>Database where files are stored and managed</p></td>
 						</tr>
 						<tr class="fragment fade-left">
 							<td class="u-orange"><h4>Server</h4></td>
@@ -77,22 +86,27 @@
 							<td><p>The computer you use to connect to the server</p></td>
 						</tr>
 						<tr class="fragment fade-left">
-							<td class="u-orange"><h4>Working/Local Copy</h4></td>
-							<td><p>The repo files you keep on your computer to make changes</p></td>
+							<td class="u-orange"><h4>Local Copy</h4></td>
+							<td><p>Repo files you keep on your computer to make changes</p></td>
 						</tr>
 					</table>
 					<aside class="notes">
-						Before we get started, let's learn some of the basic terminology you'll be hearing today.
+						Before we get started, let's learn some of the basic terminologies you'll be hearing today.
 					</aside>
 				</section>
-				<!-- Slide 5 -->
-				<section>ToDo: Add visual for previous slide</section>
 				<!-- Slide 6 -->
+				<section>
+					<img src="images/server-repo.png" alt="Server Repo Illustration">
+					<aside class="notes">
+						Illustration of terms learned in the last slide.
+					</aside>
+				</section>
+				<!-- Slide 7 -->
 				<section>
 					<h3>More Lingo!</h3>
 					<table>
 						<tr class="fragment fade-left">
-							<td class="u-orange"><h4>Master Branch/Trunk</h4></td>
+							<td class="u-orange"><h4>Master</h4></td>
 							<td><p>The primary location for code in the repo</p></td>
 						</tr>
 						<tr class="fragment fade-left">
@@ -105,23 +119,29 @@
 						</tr>
 						<tr class="fragment fade-left">
 								<td class="u-orange"><h4>Merge</h4></td>
-								<td><p>Add the changes from one file to another, bringing them up-to-date</p></td>
+								<td><p>Add changes from one file into another</p></td>
 							</tr>
 					</table>
 					<aside class="notes">
-						Branches allow each developer to "branch" off of master to work independently. Later on, they will be able to merge their changes back into the master branch...or merge changeds made to master into their personal branch.
+						Branches allow each developer to "branch" off of master to work independently. Later on, they will be able to merge their changes back into the master branch or merge changes made to master into their branch.
 					</aside>
 				</section>
-				<!-- Slide 7 -->
-				<section>ToDo: Add visual for previous slide</section>
 				<!-- Slide 8 -->
+				<section>
+					<img src="images/fork-lingo.png" alt="Branching Illustration">
+					<aside class="notes">
+						Illustration of terms learned in the last slide.
+					</aside>
+				</section>
+				<!-- Slide 9 -->
 				<section>
 					<a href="https://git-scm.com/downloads" target="_blank"><img src="images/download-git.png" alt="Download Git"></a>
 					<small>Download Git: https://git-scm.com/downloads</small>
-
-					<aside class="notes">Direct the participants to navigate to the download url and download Git. Remember, Windows users will need to use Git Bash instead of Terminal</aside>
+					<aside class="notes">
+						Direct the participants to navigate to the download URL and download Git. Remember, Windows users will need to use Git Bash instead of Terminal.
+					</aside>
 				</section>
-				<!-- Slide 9 -->
+				<!-- Slide 10 -->
 				<section>
 					<div>
 						<h5>Set the default <span class="u-orange">name</span> Git will use when you commit</h5>
@@ -140,14 +160,14 @@
 						</pre>
 					</div>
 					<aside class="notes">
-						Now that you have Git installed, let's customize your Git environment. We will start by setting your user name and email address. You only have to do this once and you can update the information whenever you want by using the same commands. 
+						Now that you have Git installed let's customize your Git environment. We will start by setting your username and email address. You only have to do this once, and you can update the information whenever you want by using the same commands. 
 						<br><br>
-						( Walk participants through commands on screen **explain that they do not have to type in the $, this just indicates it is a shell command )
+						*INSTRUCTOR: Walk participants through commands on screen **explain that they do not have to type in the $, this just indicates it is a shell command.
 						<br><br>
-						The --global option is what makes this something you only need to do once. If you want to override this with a different name or email address for a specific project,run the command without the --global option when you’re in that project.
+						The --global option is what makes this something you only need to do once. You can override this with a different name or email address for a specific project by running the command without the --global option inside that project.
 					</aside>
 				</section>
-				<!-- Slide 10 -->
+				<!-- Slide 11 -->
 				<section>
 					<h5>View your <span class="u-orange">config</span> settings</h5>
 					<pre>
@@ -159,7 +179,7 @@
 						You can check the settings you just made by running the config-list command.
 					</aside>
 				</section>
-				<!-- Slide 11 -->
+				<!-- Slide 12 -->
 				<section>
 					<h5>First, let's get our bearings.</h5> 
 					<pre>
@@ -168,12 +188,12 @@
 						</code>
 					</pre>
 					<aside class="notes">
-						Next we will make our first local git repository. Before we start, let's make sure we know where we are. Since you have not navigated anywhere, you should be in your root directory. The root directory is usually indicated by the '~' (tilde pronounced til-da)
+						Next, we will make our first local git repository. Before we start, let's make sure we know where we are. Since you have not navigated anywhere, you should be in your root directory. The root directory is usually indicated by the '~' (tilde pronounced til-da)
 						<br><br>
-						Run the 'ls' command. This command will list the contents of the directory you are currently in.
+						Run the 'ls' command. This command will list the contents of the directory in which you are currently.
 					</aside>
 				</section>
-				<!-- Slide 12 -->
+				<!-- Slide 13 -->
 				<section>
 					<h5>If you are in your <span class="u-orange">root directory </span>you should see something like this.</h5>
 					<img src="images/home-directory.png" alt="home directory" style="width: 650px; height: auto; margin-bottom: 50px;">
@@ -186,12 +206,12 @@
 						</pre>
 					</div>
 					<aside class="notes">
-						Your root directory stores all of the directories that belong to the username you are logged in with. You should see things like 'Desktop', 'Documents', 'Downloads', etc. (**Note, image shows MAC OS directory)
+						Your root directory stores all of the directories that belong under the logged in username. You should see things like 'Desktop,' 'Documents,' 'Downloads,' etc. (**Note, image shows MAC OS directory)
 						<br><br>
-						If you are not in your root directory, you can get there easily by running the 'change directory' command with the tilde.
+						If you are not in your root directory, you can get there by running the 'change directory' command with the tilde.
 					</aside>
 				</section>
-				<!-- Slide 13 -->
+				<!-- Slide 14 -->
 				<section>
 				    <h5>Make your first Git Repo!</h5> 
 					<pre>
@@ -216,17 +236,17 @@
 						</pre>
 					</div>
 					<aside class="notes">
-						Once you are sure you are in your root directory, go ahead and run the following command to make your very first repository (** You may want to explain that it is OK to CD to their Desktop, or another directory to create this folder).
+						Once you are sure you are in your root directory, go ahead and run the following command to make your very first repository *INSTRUCTOR: You may want to explain that it is OK to CD to their Desktop, or another directory to create this folder.
 						<br><br>
 						Next, use the 'Change Directory' command to move inside the directory you just made.
-						You must be inside a folder in order to initialize Git.
+						You must be inside a folder to initialize Git.
 						<br><br>
-						Initialize your Git repository by running 'git init'. This command creates an empty Git repository. You should see a notice in the command line telling you. "Initialized empty Git repository in /Usesr/..." 
+						Initialize your Git repository by running 'git init.' This command creates an empty Git repository. You should see a notice on the command line telling you. "Initialized empty Git repository in /Usesr/..." 
 						<br><br>
-						(** There is a lot going on behind the scenes here that may be overwhelming for those just learning. A .git directory with the necessary subdirectories and an initial HEAD file is created. In short, this is everything needed to create a master branch and start tracking changes).
+						*INSTRUCTOR: A lot is going on behind the scenes here that may be overwhelming for those just learning. A .git directory with the necessary subdirectories and an initial HEAD file is created. In short, this is everything needed to create a master branch and start tracking changes.
 					</aside>
 				</section>
-				<!-- Slide 14 -->
+				<!-- Slide 15 -->
 				<section>
 					<h5>Let's check the status of our <span class="u-orange">Git Repo</span>.</h5>
 					<pre>
@@ -237,12 +257,12 @@
 					<aside class="notes">
 						You can run the 'git status' command to check the status of your repo. 
 						<br><br>
-						(** ask the class to run it and then ask what they see.
-						<br><br>They should see "On branch Master / Initial commit / nothing to commit (create/copy files and use "git add" to track")
+						*INSTRUCTOR: ask the class to run it and then ask what they see.
 						<br><br>
+						*They should see "On branch Master / Initial commit/nothing to commit (create/copy files and use "git add" to track."
 					</aside>
 				</section>
-				<!-- Slide 15 -->
+				<!-- Slide 16 -->
 				<section>
 					<h5>Let's create a file and add it to<span class="u-orange"> your repo</span>.</h5>
 					 <pre>
@@ -272,13 +292,14 @@
 						<br><br>
 						Then run the ls command to see that the file was created. Running this command should output the name of the file in the command line.
 						<br><br>
-						Now, let's tell Git to track this new file. Do this by typing in the 'git add' command followed by the name of the file you just created. This tells Git to add it to the files to be tracked.
+						Now, let's tell Git to track this new file. Do this by typing in the 'git add' command followed by the name of the file you just created. This command tells Git to add it to the tracked files.
 						<br><br>
-						Tell the class to run the 'git status' command and tell you what they see.(** tey should see, Initial commit / Changes to be comitted:...)
+						*INSTRUCTOR: Tell the class to run the 'git status' command and tell you what they see.(** they should see, Initial commit / Changes to be committed: . . .)
+						<br><br>
 						Congrats! Your file is now being tracked by Git!
 					</aside>
 				</section>
-				<!-- Slide 16 -->
+				<!-- Slide 17 -->
 				<section>
 					<h5>Time to <span class="u-orange">commit</span>!</h5>
 					<pre>
@@ -287,22 +308,20 @@
 						</code>
 					</pre>
 					<aside class="notes">
-						Your file is being tracked but you have not commited the changes to memory. To commit the file, run the 'git commit -m' command. It is important that you add a description of your commit in quotes after the -m (m stands for message). 
+						Your file is being tracked, but you have not committed the changes to memory. To commit the file, run the 'git commit -m' command. It is important that you add a description of your commit in quotes after the '-m' (m stands for message). 	
 						<br><br>
-						If not, the command line will open VIM. Esacping VIM, the difficulty of escaping VIM that is, is a common development joke. (** You may want to cover how to escape VIM )
-						<br><br>
+						If not, the command line will open VIM. Escaping VIM, the difficulty of escaping VIM that is a standard development joke. (** You may want to cover how to escape VIM ).
 					</aside>
 				</section>
-				<!-- Slide 16 -->
+				<!-- Slide 18 -->
 				<section>
 					<h3>Phew! That was a lot. <span class="u-orange">Let's review</span> !</h3>
 					<aside class="notes">
-						Now is a good time to make sure everyone is caught up and in the same place. Reasure anyone that isn't and get them caught up before proceeding to the next slide.
+						*INSTRUCTOR: Now is an excellent time to make sure everyone is caught up and in the same place. Reassure anyone that isn't and get them caught up before proceeding to the next slide.
 					</aside>
 				</section>
-				<!-- Slide 17 -->
+				<!-- Slide 19 -->
 				<section>
-					<h3></h3>
 					<table>
 						<tr class="fragment fade-left">
 							<td class="u-orange">
@@ -331,16 +350,16 @@
 						</tr>
 					</table>
 					<aside class="notes">
-						Review each of these commands. Remind the class that these are git commands, different from bash commands. They must put 'git' before each one for the commands to work, and they will only work in a Git repository.
+						Review each of these commands. Remind the class that these are git commands, different from bash commands. They must put 'git' before each one of the commands, and they will only work in a Git repository.
 						<br><br>
 						** Git Add - This adds the files to the repo to be tracked AND stages it. Staging is different than adding. Staging tells git to track the current state of the file. 
 						<br><br>
-						** Git Commit  - A commits saves the changes made to the file, not the file itself. Each commit has a 'hash' so we can track which changes were committed when and by whom. 
-						<br><br>
+ 						** Git Commit  - A commit saves the changes made to the file, not the file itself. Each commit has a 'hash' so we can track which changes were committed when and by whom. 
+						 <br><br>
 						** What is a hash? - Git uses SHA-1 hashes. An SHA-1 is an algorithm that takes some data as input and generates a unique 40 character string from it. That means each commit is 100% unique.
 					</aside>
 				</section>
-				<!-- Slide 18 -->
+				<!-- Slide 20 -->
 				<section>
 					<h5>Let's look at what <span class="u-orange">we've done</span></h5>
 					<pre>
@@ -364,7 +383,7 @@
 						The log command will show you the commit logs. You should see something that looks like this.
 					</aside>
 				</section>
-				<!-- Slide 19 -->
+				<!-- Slide 21 -->
 				<section>
 					<h5>Let's make <span class="u-orange">a local mistake</span> .</h5>
 					<div class="fragment fade-left">
@@ -377,20 +396,20 @@
 					<aside class="notes">
 						Nobody's perfect. Let's walk through how to handle mistakes. 
 						<br><br>
-						Earlier, we created a text file and conmitted it to be tracked by git. Open that file using notepad/text-edit (right click=> Open with).
+						Earlier, we created a text file and committed it to be tracked by git. Open that file using notepad/text-edit (right click=> Open with).
 						<br><br>
 						Now, type something into the file and save it (ctrl+S).
 						<br><br>
 						Whoops! We made a mistake. We didn't mean to change that file. What can we do?!
 						<br><br>
-						In terminal, type the command 'git checkout myfile.txt'. This will update the files in your root working directory to match the version in the index.
+						In the terminal, type the command 'git checkout myfile.txt.' This command will update the files in your root working directory to match the version in the index.
 						<br><br>
 						Go ahead and check it. Close the text file (if still open) and then reopen it. The text you typed in should be gone. But Why?
 						<br><br>
-						You made changes to the file but never committed them to the index. Until you commit them, they only exist locally. This is an important thing to remember as you work with git. Remember to commit your changes frequently.
-					</aside>
+						You made changes to the file but never committed them to the index. Until you commit them, they only exist locally. It is important to remember this as you work with Git. Remember to commit your changes frequently.
+				</aside>
 				</section>
-				<!-- Slide 20 -->
+				<!-- Slide 22 -->
 				<section>
 					<h5>Let's make <span class="u-orange">a staged mistake</span> .</h5>
 					<div class="fragment fade-left">
@@ -409,22 +428,22 @@
 						</pre>
 					</div>
 					<aside class="notes">
-						What happens if you added the file already? Remember, once a file is added, it is 'staged' in the index. That means Git is aware there has been a change added but not commited.
+						What happens if you added the file already? Remember, once a file is added, it is 'staged' in the index. That means Git is aware there has been a change added but not committed.
 						<br><br>
 						Let's give it a try. Open your text file again and add some text.
 						<br><br>
-						Next, add it to Git using 'git add'
+						Next, add it to Git using 'git add.'
 						<br><br>
 						Whoops! We didn't want to add that. How do we fix it?
 						<br><br>
-						Run the next command, 'git reset HEAD myfile.txt'
+						Run the next command, 'git reset HEAD myfile.txt.'
 						<br><br>
 						Go ahead and check it. Close the text file (if still open) and then reopen it. The text you typed in should be gone. But Why?
 						<br><br>
-						This command tells Git to throw away any uncommitted changes and set the file back to the last HEAD. HEAD is simply the name given to the commit from which the working tree's current state was initialized. (** This may take further exposition as HEAD can be a confusing idea for beginners)
+						This command tells Git to throw away any uncommitted changes and set the file back to the last HEAD. HEAD is the name given to the commit from which the working tree's current state was initialized. *INSTRUCTOR: This may take further exposition as HEAD can be a confusing idea for beginners)
 					</aside>
 				</section>
-				<!-- Slide 20 -->
+				<!-- Slide 23 -->
 				<section>
 					<h5>Let's make <span class="u-orange">a commited mistake</span> .</h5>
 					<div class="fragment fade-left">
@@ -445,36 +464,34 @@
 						</pre>
 					</div>
 					<aside class="notes">
-						What happens if you commited the file already? Remember, once a file is commited, it is logged in the index.
+						What happens if you committed the file already? Remember, once a file is committed, it is logged in the index.
 						<br><br>
 						Let's give it a try. Open your text file again and add some text.
 						<br><br>
-						Next, add it using 'git add'
+						Next, add it using 'git add.'
 						<br><br>
-						Next, commit it using 'git commit'
+						Next, commit it using 'git commit.'
 						<br><br>
 						Whoops! We didn't want to add that. How do we fix it?
 						<br><br>
-						Run the command, 'git log'. This will output the hash# belonging to the latest commit. Remember the hash? It is the unique 40 character # Git gives to each commit. It's about to come in very handy!
+						Run the command, 'git log.' This command will output the hash# belonging to the latest commit. Remember the hash? It is the unique 40 character # Git gives to each commit. It's about to come in very handy!
 						<br><br>
-						Copy the commit Hash, then type in :q to exit the log.
+						Copy the commit Hash, then type in  ':q' to exit the log.
 						<br><br>
-						Type in the command 'git revert' followed by the hash number you just copied. You should immediately see an output in the command line stating: 'On branch master
-						nothing to commit, working tree clean'
+						Type in the command 'git revert' followed by the hash number you just copied. You should immediately see the output on the command line stating: 'On branch master nothing to commit, working tree clean.'
 						<br><br>
-						What just happened? Well, we had already committed the change which meant that we could not simply reset. We had to go a step further and tell Git to revert the last commit. This essentially removes the changes from that commit and set's it back to the HEAD state before that commit was made.
+						What just happened? Well, we had already committed the change which meant that we could not reset. We had to go a step further and tell Git to revert the last commit. This command removes the changes from that commit and set's it back to the HEAD state before that commit was made.
 					</aside>
 				</section>
-				<!-- Slide 21 -->
+				<!-- Slide 24 -->
 				<section>
 					<h3>Git &amp; GitLab</h3>
 					<h4>Git &ne; GitLab</h4>
 					<aside class="notes">
 						Git, GitLab...what's the difference?
-						<br><br>
 					</aside>
 				</section>
-				<!-- Slide 22 -->
+				<!-- Slide 25 -->
 				<section>
 					<h3>GitLab</h3>
 					<ul>
@@ -485,12 +502,14 @@
 						<li><span class="u-orange">Use and learn</span> from the code in other people's repositories.</li>
 					</ul>
 					<aside class="notes">
-					GitLab offers a host of features. As a beginner, the most important thing to know is that GitLab in an Open Source community dedicated to helping people share and learn from one anothers work. 
-					<br><br>**Ask the group if they know what Open Source means. Many may be unaware of the power the Open Source community has to help beginners and advanced users alike.
-					<br><br>**Some may ask if GitLab is the same as GitHub, we get that a lot! Explain that they are similar in that they both alow you to host and share code.
+						GitLab offers a host of features. As a beginner, the most important thing to know is that GitLab in an Open Source community dedicated to helping people share and learn from one another's work. 
+						<br><br>
+						*INSTRUCTOR: Ask the group if they know what Open Source means. Many may be unaware of the power the Open Source community has to help beginners and advanced users alike.
+						<br><br>
+						*INSTRUCTOR: Some may ask if GitLab is the same as GitHub, we get that a lot! Explain that they are similar in that they both allow you to host and share code.
 					</aside>
 				</section>
-				<!-- Slide 22 -->
+				<!-- Slide 26 -->
 				<section>
 					<h3>GitLab's Awesome Features</h3>
 					<ul>
@@ -501,38 +520,42 @@
 						<li>Public projects and groups get all gold plan features for <span class="u-orange">free</span></li>
 					</ul>
 					<aside class="notes">
-					GitLab offers a host of features. As a beginner, the most important thing to know is that GitLab in an Open Source community dedicated to helping people share and learn from one anothers work. 
-					<br><br>**Ask the group if they know what Open Source means. Many may be unaware of the power the Open Source community has to help beginners and advanced users alike.
-					<br><br>**Some may ask if GitLab is the same as GitHub, we get that a lot! Explain that they are similar in that they both alow you to host and share code.
+						GitLab has many great features, here are just a few.
 					</aside>
 				</section>
-				<!-- Slide 23 -->
+				<!-- Slide 27 -->
 				<section>
 					<h3>Setup Account with GitLab</h3>
 					<img src="images/gitlab-signin.png" alt="GitLab Sign-in" style="max-height: 500px; width: auto">
 					<div id="u-url">https://gitlab.com</div>
 					<aside class="notes">
-					Navigate to gitlab.com and select the 'Register' tab.
-					You will need to enter details and confirm your email address. Then you will be able to log-in using the credentials you registered with.
-					<br><br>**If they already have a github or bitbucket account, let them know they can sign-in using that account and import projects.
+						Navigate to gitlab.com and select the 'Register' tab.
+						You will need to enter details and confirm your email address. Then you will be able to log-in using the credentials with which you registered.
+						<br><br>
+						**If they already have a GitHub or bitbucket account, let them know they can sign-in using that account and import projects.
 					</aside>
 				</section>
-				<!-- Slide 23 -->
+				<!-- Slide 28 -->
 				<section>
 					<h3>First look at GitLab</h3>
 					<img src="images/welcome-to-gitlab.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
 					<aside class="notes">
 						Once logged in, you can do a number of things.
-						<br><br>You can create a project. A project is where you house your files (the repo), plan your work (using GitLab issues), and publish documents (GitLab wiki). 
-						<br><br>You can have a project without any code and use issues to track and plan 
-						work or the wiki to publish documents.
-						<br><br>You can have a repo with your codebase and never use issues or the wiki. 
-						<br><br>It is all up to you!
-						<br><br>You can create a group. Groups are the best way to manage multiple projects and members.
-						<br><br>You can also explore public projects or learn more about GitLab using our documentation.
+						<br><br>
+						You can create a project. A project is where you house your files (the repo), plan your work (using GitLab issues), and publish documents (GitLab wiki). 
+						<br><br>
+						You can have a project without any code and use issues to track and plan work or the wiki to publish documents.
+						<br><br>
+						You can have a repo with your codebase and never use issues or the wiki. 
+						<br><br>
+						It is all up to you!
+						<br><br>
+						You can create a group. Groups are the best way to manage multiple projects and members.
+						<br><br>
+						You can also explore public projects or learn more about GitLab using our documentation.
 					</aside>
 				</section>
-				<!-- Slide 24 -->
+				<!-- Slide 29 -->
 				<section>
 					<h3>Add your SSH key</h3>
 					<img src="images/ssh-key.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
@@ -540,12 +563,12 @@
 					<aside class="notes">
 						Before we do anything, we need to set up your SSH Key. What is an SSH Key?
 						<br><br>
-						In order to push your changes to a GitLab server you need a secure communication channel for sharing information. The SSH protocol provides this security and allows you to authenticate to the GitLab remote server without supplying your username or password each time. 
+						To push your changes to a GitLab server, you need a secure communication channel for sharing information. The SSH protocol provides this security and allows you to authenticate to the GitLab remote server without supplying your username or password each time. 
 						<br><br>
 						Step by step documentation here: https://docs.gitlab.com/ee/ssh/README.html#doc-nav
 					</aside>
 				</section>
-				<!-- Slide 25 -->
+				<!-- Slide 30 -->
 				<section>
 					<h3>Check for an <span class="u-orange">existing SSH</span> key</h3>
 					<div class="fragment fade-left">
@@ -570,7 +593,7 @@
 						In your terminal, run the following command (based on your OS). 
 					</aside>
 				</section>
-				<!-- Slide 26 -->
+				<!-- Slide 31 -->
 				<section>
 					<h3>Existing SSH key</h3>
 					<div class="fragment fade-left">
@@ -582,11 +605,10 @@
 						</pre>
 					</div>
 					<aside class="notes">
-						If you see a string starting with 'ssh-rsa' (pictured here), then you have an existing SSH key pair. You can skip this next part!
-						<br><br>
+						If you see a string starting with 'SSH-RSA' (pictured here), then you have an existing SSH key pair. You can skip this next part!
 					</aside>
 				</section>
-				<!-- Slide 27 -->
+				<!-- Slide 32 -->
 				<section>
 					<h3>Generate a <span class="u-orange">new SSH key</span> pair</h3>
 					<h5>Git Bash on Windows / GNU/Linux / macOS / PowerShell:</h5>
@@ -615,7 +637,7 @@
 						Press enter to use the suggested path.
 					</aside>
 				</section>
-				<!-- Slide 28 -->
+				<!-- Slide 33 -->
 				<section>
 					<h3>Passphrase</h3>
 					<div class="fragment fade-left">
@@ -628,10 +650,10 @@
 						</pre>
 					</div>
 					<aside class="notes">
-						Once you have input a file path you will be prompted to input a password to secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required and you can skip creating a password by pressing enter.
+						Once you have input a file path, you will be prompted to input a password to secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required, and you can skip creating a password by pressing enter.
 					</aside>
 				</section>
-				<!-- Slide 29 -->
+				<!-- Slide 34 -->
 				<section>
 					<h3>Your key</h3>
 					<div class="fragment fade-left">
@@ -656,10 +678,11 @@
 					</div>
 					<aside class="notes">
 						Once you have completed this step, you will see something like this generated.
-						<br><br>This is your SSH Key!
+						<br><br>
+						This funny looking pattern is your SSH Key!     
 					</aside>
 				</section>
-				<!-- Slide 31 -->
+				<!-- Slide 35 -->
 				<section>
 					<h3>Copy the <span class="u-orange">public SSH key</span></h3>
 					<h5>macOS:</h5>
@@ -692,16 +715,488 @@
 						For those of you that already had an SSH key pair, you will need to do these next steps as well.
 					</aside>
 				</section>
-				<!-- Slide 32 -->
+				<!-- Slide 36 -->
 				<section>
 					<h3>Add your key to <span class="u-orange">your profile</span></h3>
 					<img src="images/ssh-key.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
 					<aside class="notes">
 						The final step is to add your public SSH key to GitLab.
 						<br><br>
-						Navigate to the 'SSH Keys' tab in your 'Profile Settings'. Paste your key in the 'Key' section and give it a relevant 'Title'. Use an identifiable title like 'Work Laptop - Windows 7' or 'Home MacBook Pro 15'.
+						Navigate to the 'SSH Keys' tab in your 'Profile Settings.' Paste your key in the 'Key' section and give it a relevant 'Title.' Use an identifiable title like 'Work Laptop - Windows 7' or 'Home MacBook Pro 15'.
 						<br><br>
-						If you manually copied your public SSH key make sure you copied the entire key starting with ssh-rsa and ending with your email.
+						If you manually copied your public SSH key make sure you copied the entire key starting with SSH-RSA and ending with your email.
+					</aside>
+				</section>
+				<!-- Slide 37 -->
+				<section>
+					<h3>GitLab <span class="u-orange">Groups</span></h3>
+					<img src="images/wwc-group.png" alt="WWC Gitlab Group" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Next, we are going to navigate to the Women Who Code Group. 
+						<br><br>
+						GitLab Groups allow you to assemble related projects and grant members access to several projects at once. 
+						<br><br>
+						Groups can also be nested into subgroups.
+						<br><br>
+						To find our group, click on 'Groups' in the header. Next, select the 'Explore public groups' tab. In the search bar, enter 'Women Who Code.'
+						<br><br>
+						You should see our group in the results list. Click on it.
+						<br><br>
+						*INSTRUCTOR: If time allows, you may want to take this opportunity to point out key features of the interface. 
+					</aside>
+				</section>
+				<!-- Slide 38 -->
+				<section>
+					<h3>GitLab <span class="u-orange">Projects</span></h3>
+					<img src="images/intro-git-project.png" alt="WWC Git Project" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						In GitLab, you can create projects for hosting your codebase, use it as an issue tracker, collaborate on code, and continuously build, test, and deploy your app with built-in GitLab CI/CD.
+						<br><br>
+						Your projects can be available publicly, internally, or privately, at your choice. GitLab does not limit the number of private projects you create.
+						<br><br>
+						Look at the WWC Group page. You should see a list of projects associated with this group.
+						<br><br>		
+						Find and choose the 'Intro to Git and GitLab group.'
+					</aside>
+				</section>
+				<!-- Slide 39 -->
+				<section>
+					<h3>Forking a <span class="u-orange">Project</span></h3>
+					<img src="images/fork-button.png" alt="WWC Git Project" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Next, we are going to fork the 'Intro to Git and GitLab' project.
+						<br><br>
+						A fork is a copy of an original repository. We will make a copy of the original project and place it in a new namespace. Doing so allows us to experiment and apply changes without affecting the original project.
+						<br><br>
+						It takes just a few steps to fork a project in GitLab.
+						<br><br>
+						Start by clicking the 'fork' button at the top of the project page. 
+					</aside>
+				</section>
+				<!-- Slide 40 -->
+				<section>
+					<img src="images/fork-screen.png" alt="Fork screen" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Once you do that, you'll be presented with a screen where you can choose the namespace under which you'd like to place the fork. Only namespaces (groups and your own namespace) where you have write access to, will be shown. Click on the namespace to create your fork there.
+					</aside>
+				</section>
+				<!-- Slide 41 -->
+				<section>
+					<h3>Success!</h3>
+					<img src="images/fork-complete.png" alt="Fork screen" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						You should now see the forked project under your username. *INSTRUCTOR: It may be helpful to point out the breadcrumbs that now show the project under their username.
+						<br><br>
+						Forking a project has two purposes. It allows you to suggest changes to the existing project. In this case, you would make changes to your local copy and create a merge request to have them pushed 'upstream' to the original. A forked project can also be used as a starting point for your own. In many instances, people will 'fork' a boilerplate project to give them a jump-start on their own.
+						<br><br>
+						The latter is what we are doing today. We do not want to push changes back to the original repo. Instead, we want to play around with this on our own.
+						<br><br>
+						So, before we start, let's remove the forked relationship.
+					</aside>
+				</section>
+				<!-- Slide 42 -->
+				<section>
+					<h3>Remove <span class="u-orange">Forked</span> Relationship</h3>
+					<h5>Settings/General</h5>
+					<img src="images/settings-general.png" alt="Settings/General" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Go to Settings/General.
+					</aside>
+				</section>
+				<!-- Slide 43 -->
+				<section>
+					<h5>Settings/General/Advanced</h5>
+					<img src="images/settings-advanced.png" alt="Settings/Advanced" style="max-height: 500px; width: auto">
+					<h5>Remove Forked Relationship</h5>
+					<img src="images/settings-remove-fork.png" alt="Remove Fork" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Under General, find 'Advanced' and expand to see all options.
+						<br><br>
+						Once expanded, find the 'Remove Forked Relationship' option.
+					</aside>
+				</section>
+				<!-- Slide 44 -->
+				<section>
+					<h5>Confirmation Modal</h5>
+					<img src="images/fork-modal.png" alt="Fork Modal" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						A modal will pop up to confirm the removal. You must type in the name of the project to complete the action. This action prevents users from accidentally removing a forked relationship.
+					</aside>
+				</section>
+				<!-- Slide 45 -->
+				<section>
+					<h5>Success!</h5>
+					<img src="images/fork-confirmation.png" alt="Fork Removed" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Once complete, you will see an alert telling you that the forked relationship has been removed.
+					</aside>
+				</section>
+				<!-- Slide 46 -->
+				<section>
+					<h3>Cloning</h3>
+					<img src="images/clone-repo.png" alt="Clone Repo" style="max-height: 400px; width: auto">
+					<aside class="notes">
+						Now that we have our copy of the project, we can work on it locally. To work on a git project locally (from your computer), you will need to clone it.
+						<br><br>
+						To clone the project, you can copy a link to the Git repository through an SSH or an HTTPS protocol. SSH is easier to use after it's been set up, luckily we have already done that! 
+						<br><br>
+						While you are at the Project tab, select HTTPS or SSH from the drop-down menu and copy the link using the 'Copy to clipboard' button (you'll have to paste it on your shell in the next step).
+					</aside>
+				</section>
+				<!-- Slide 47 -->
+				<section>
+					<h3>Clone<span class="u-orange"> locally</span></h3>
+					<div>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git clone PASTE SSH HERE
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Check clone</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									$ ls
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Move into the directory</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									$ cd NAME-OF-PROJECT-OR-FILE
+								</code>
+							</pre>
+						</div>
+					</div>
+					<aside class="notes">
+						In your terminal, get yourself into the directory you want to clone the repo. The directory you choose is up to you; you can clone it into a unique folder you create, your desktop, etc. Just make sure you know where you are cloning it and will be able to find it quickly again.
+						<br><br>
+						Once you have navigated to the place you want to clone the file, clone it locally using the git clone command. This will immediately create a clone of the project on your computer.
+						<br><br>
+						Once complete, run the list command (ls) to make sure you see the clone.
+						<br><br>
+						Then, move inside your cloned repo by using the change directories (cd) command.
+					</aside>
+				</section>
+				<!-- Slide 48 -->
+				<section>
+					<h5>Create a <span class="u-orange">new branch</span> &amp; <span class="u-orange">checkout</span></h5>
+					<div>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									checkout -b BRANCHNAME
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Create branch <span class="u-orange">only</span></h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git branch BRANCHNAME
+								</code>
+							</pre>
+						</div>
+					</div>
+					<aside class="notes">
+						Now that we have our local working copy let's make some changes. It is not good practice to work directly in master. Master is often seen by the team as the 'Production Master.' That is to say; it is the final working version of the repo. All development should be done on a separate branch which is then merged into master once it has been reviewed.
+						<br><br>
+						Let's create a branch to work on using the following command. This command is two-in-one. It creates a new branch and checks it out at the same time. 'Checking out' a branch places you inside that branch.
+						<br><br>
+						You may see the following method for creating a branch. This command will create a branch, but you will have to check it out manually.
+					</aside>
+				</section>
+				<!-- Slide 49 -->
+				<section>
+					<h3>Make a <span class="u-orange">change</span></h3>
+					<p>Open up the README.md file using your favorite code editor.</p>
+					<aside class="notes">
+						We have our branch, let's go ahead a make a change to one of the files. This repo contains the presentation you see today, developed using reveal.js. Don't worry! You don't need to know any programming to make a change. We are going to make a simple change to the README file.
+						<br><br>
+						The README file contains information about the directory and its contents. The README file for this repo is written in markdown, a lightweight markup language with plain text formatting syntax.
+						<br><br>
+						Open the README file in an editor of your choice. *INSTRUCTOR: You may have to walk individuals through this process. They should have an editor like Atom, Sublime, or Visual Code installed already.
+						<br><br>
+						*INSTRUCTOR: Instruct the class to make a change at the end of the README file. It doesn't matter what it is. Add their name, a sentence, or delete content. Make sure they hit save!
+					</aside>
+				</section>
+				<!-- Slide 50 -->
+				<section>
+					<h5>Check  <span class="u-orange">git status</span></h5>
+					<div>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git status
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Output</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									modified: README.md
+								</code>
+							</pre>
+						</div>
+					</div>
+					<aside class="notes">
+						Once you have made a change and saved it, go back to the terminal and use 'git status' to see if the changes were registered.
+						<br><br>
+						You should see the following output in the terminal, marked in red. This message means that changes have been made but have not been staged for tracking yet.
+					</aside>
+				</section>
+				<!-- Slide 51 -->
+				<section>
+					<h5>Stage file for <span class="u-orange">tracking</span></h5>
+					<div>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git add README.md
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Check status</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git status
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Output</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									modified: README.md
+								</code>
+							</pre>
+						</div>
+					</div>
+					<aside class="notes">
+						Let's stage the file for tracking by adding it.
+						<br><br>
+						Next, recheck the Git status.
+						<br><br>
+						You should see the following output in the terminal, marked in green.
+					</aside>
+				</section>
+				<!-- Slide 52 -->
+				<section>
+					<h5>Time to <span class="u-orange">commit!</span></h5>
+					<div>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git commit -m "details of the change made"
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Check status</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git status
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Output</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									On branch [BRANCHNAME]
+									Your branch is ahead of 'origin/[BRANCHNAME]' by 1 commit.
+										(use "git push" to publish your local commits)
+									nothing to commit, working tree clean
+								</code>
+							</pre>
+						</div>
+					</div>
+					<aside class="notes">
+						Commit your change and make sure to write a detailed commit message.
+						<br><br>
+						Next, recheck the Git status.
+						<br><br>
+						This time, you should see the name of the branch you are on. You should also know that you are ahead of the origin of that branch by one commit. The 'Origin' is the branch on the server. Your local copy contains one change that is not yet on the server copy.
+					</aside>
+				</section>
+				<!-- Slide 53 -->
+				<section>
+					<h5>Let's <span class="u-orange">push!</span></h5>
+					<div>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git push
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Error!</h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									fatal: The current branch test-branch has no upstream branch.
+									To push the current branch and set the remote as upstream, use
+									
+										git push --set-upstream origin [BRANCHNAME]
+								</code>
+							</pre>
+						</div>
+					</div>
+					<aside class="notes">
+						Let's push these changes to the server using git push.
+						<br><br>
+						Uh-oh! We got an error, but why?
+						<br><br>
+						We created the branch in our local working repository. Your local branches aren’t automatically synchronized to the remotes server — you have to push the branches you want to share explicitly.
+					</aside>
+				</section>
+				<!-- Slide 54 -->
+				<section>
+					<h5>Set Origin</h5>
+					<div>
+						<pre>
+							<code data-trim data-noescape>
+									git push --set-upstream origin [BRANCHNAME]
+							</code>
+						</pre>
+						<pre>
+							<code data-trim data-noescape>
+									Branch [BRANCHNAME] set up to track remote branch test-branch from origin
+							</code>
+						</pre>
+					</div>
+					<aside class="notes">
+						Luckily, Git gives you the command needed to do this. Use the 'set origin' command to push this local branch to the remote server.
+						<br><br>
+						You should see a flurry of activity ending with the following message: "Branch [BRANCHNAME] set up to track remote branch test-branch from the origin." 
+					</aside>
+				</section>
+				<!-- Slide 55 -->
+				<section>
+					<h3>Our First <span class="u-orange">Merge Request</span></h3>
+					<img src="images/gitlab-merge-request.png" alt="Merge Request" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Let's make our first merge request. What is a merge request? Exactly what it sounds like,  a request to merge one branch into another.
+						<br><br>
+						Go back to your project homepage in GitLab. At the top of the screen, you should see a message about your recent changes to the branch. This message includes a button to create a merge request. Go ahead and press it!
+					</aside>
+				</section>
+				<!-- Slide 56 -->
+				<section>
+					<h5>Fill in the <span class="u-orange">details</span></h5>
+					<img src="images/merge-request-screen.png" alt="Merge Request" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						You have several options here. You can change the title and add a description. These can help others quickly understand what this merge request is all about.
+						<br><br>
+						Further down, you can assign a particular person to review your merge request. Most teams have a process for who reviews and merges these requests.
+						<br><br>
+						You can assign a milestone. Milestones allow you to organize issues and merge requests into a cohesive group, with an optional start date and an optional due date.
+						<br><br>
+						Labels can be added to tag the merge request. Labels provide an easy way to categorize the issues or merge requests based on descriptive titles like bug, documentation or any other text. They can have different colors, a description, and are visible throughout the issue tracker or inside each issue individually.
+						<br><br>
+						At the very bottom of the page, you will see the 'Source Branch' and the 'Target Branch.' The 'Source Branch' is the branch you are on., It is the 'source' of the changes. The 'Target Branch' is the branch into which the changes will be merged. It is the 'target' for the changes.
+					</aside>
+				</section>
+				<!-- Slide 57 -->
+				<section>
+					<h5>Merge your <span class="u-orange">Merge Request</span></h5>
+					<img src="images/merge-merge-request.png" alt="Merge Request" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Once submitted, you will be redirected to the merge request. Here you can see that you have the option to merge the branch. We can also add labels, assign someone, or comment on the mere request. Before we approve this merge request, let's take a look at the changes we made. 
+						<br><br>
+						To see the changes made to the code, click on the 'Changes' tab.
+					</aside>
+				</section>
+				<!-- Slide 58 -->
+				<section>
+					<h5>See your <span class="u-orange">Changes</span></h5>
+					<img src="images/merge-request-changes.png" alt="Merge Request Changes" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Once on the changes tab, you should be able to see a side-by-side representation of the changes being made to the README file. In a team setting, all changes will be reviewed and checked against specific criteria. 
+						<br><br>
+						Today we will just go ahead and merge the changes to understand the flow. 
+						<br><br>
+						*INSTRUCTOR: Instruct participants to click the 'Merge' button in the MR widget. You may want to explain the 'remove source' and 'squash commit' options. For simplicity, they should not choose those options.
+					</aside>
+				</section>
+				<!-- Slide 59 -->
+				<section>
+					<h5>Success!</h5>
+					<img src="images/merge-confirmation.png" alt="Merge Confirmation" style="max-height: 500px; width: auto">
+					<aside class="notes">
+						Once you have clicked 'merge,' you will see the status change in the merge request widget to 'merged.'
+					</aside>
+				</section>
+				<!-- Slide 60 -->
+				<section>
+					<h5>Checkout <span class="u-orange">Master</span></h5>
+					<div>
+						<pre>
+							<code data-trim data-noescape>
+								git checkout master
+							</code>
+						</pre>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Sync with <span class="u-orange">Master</span></h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git pull
+								</code>
+							</pre>
+						</div>
+					</div>
+					<div class="fragment fade-left">
+						<h5>Check <span class="u-orange">Status</span></h5>
+						<div>
+							<pre>
+								<code data-trim data-noescape>
+									git status
+								</code>
+							</pre>
+						</div>
+					</div>
+					<aside class="notes">
+						We have one last thing to do! We just merged our changes from our branch into the master branch on the server. Now we need to update our local copy of 'Master' to include these changes.
+						<br><br>
+						Let's check out the master branch using the 'git checkout' command.  
+						<br><br>
+						Use 'git pull' to update your local copy of the master branch. This command incorporates changes from a remote repository into the current branch.
+						<br><br>
+						Run 'git status' one last time to make sure you are all up to date.
+					</aside>
+				</section>
+				<!-- Slide 61 -->
+				<section>
+					<iframe src="https://giphy.com/embed/ehhuGD0nByYxO" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+					<aside class="notes">
+						Congratulations! You have accomplished a lot in a short time. You've learned the basics of version control, git, and working with GitLab.
+						<br><br>
+						*INSTRUCTOR: Ask if there are any remaining questions and encourage participants to continue practicing their newly learned skills.
 					</aside>
 				</section>
 			</div>
