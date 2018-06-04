@@ -1,61 +1,67 @@
-![Build Status](https://gitlab.com/pages/plain-html/badges/master/build.svg)
+# Intro to Git and GitLab
 
----
 
-Example plain HTML site using GitLab Pages.
+## Course description
 
-Learn more about GitLab Pages at https://pages.gitlab.io and the official
-documentation https://docs.gitlab.com/ce/user/project/pages/.
+Git is a popular version control system that allows you to easily track code changes and collaborate on projects with any number of people. In this workshop, we will go over the basics of version control, Git, and how to use GitLab to collaborate with other developers.
 
----
+### Prerequisites:
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+We won't be working on actual code in this class so there is no need for you to know any particular programming language. We will be using the command line to change directories, list directory contents, and using git from the command line throughout the class, so it is important that you feel comfortable with that. You should bring your own computer to class as we will be installing software and you will need administrator privileges.
 
-- [GitLab CI](#gitlab-ci)
-- [GitLab User or Group Pages](#gitlab-user-or-group-pages)
-- [Did you fork this project?](#did-you-fork-this-project)
-- [Troubleshooting](#troubleshooting)
 
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+### What you'll need (tech):
 
-## GitLab CI
+ - A laptop (Mac, PC, or Linux are all okay).
+ - A modern web browser - either Chrome or Firefox with Firebug installed.
+ - A code editor. We recommend Visual Studio Code (free; available for Mac, PC, and Linux).
 
-This project's static Pages are built by [GitLab CI][ci], following the steps
-defined in [`.gitlab-ci.yml`](.gitlab-ci.yml):
 
+### What we'll cover:
+
+In this workshop we'll cover:
+
+ - the basic concepts of git version control
+ - installing git
+ - git commands to track changes to a small project
+ - set up a free gitlab account
+ - create an SSH Key
+ - the basics of collaborating on projects with other developers
+
+
+### To run the presentation locally:
+
+This course was developed using [reveal.js](https://github.com/hakimel/reveal.js/). 
+
+Some reveal.js features, like external Markdown and speaker notes, require that presentations run from a local web server. The following instructions will set up such a server as well as all of the development tasks needed to make edits to the reveal.js source code.
+
+1. Install Node.js (4.0.0 or later)
+
+2. Clone the reveal.js repository
+
+```sh
+  $ git clone git@gitlab.com:sarrahvesselov/intro-to-git-gitlab.git
 ```
-image: alpine:latest
 
-pages:
-  stage: deploy
-  script:
-  - echo 'Nothing to do...'
-  artifacts:
-    paths:
-    - public
-  only:
-  - master
+3. Navigate to the reveal.js folder
+
+```sh
+$ cd reveal.js
 ```
 
-The above example expects to put all your HTML files in the `public/` directory.
+4. Install dependencies
 
-## GitLab User or Group Pages
+```sh
+$ npm install
+```
 
-To use this project as your user/group website, you will need one additional
-step: just rename your project to `namespace.gitlab.io`, where `namespace` is
-your `username` or `groupname`. This can be done by navigating to your
-project's **Settings**.
+5. Serve the presentation and monitor source files for changes
 
-Read more about [user/group Pages][userpages] and [project Pages][projpages].
+```sh
+$ npm start
+```
 
-## Troubleshooting
+6. Open http://localhost:8000 to view your presentation
 
-1. CSS is missing! That means that you have wrongly set up the CSS URL in your
-   HTML files. Have a look at the [index.html] for an example.
+You can change the port by using npm start -- --port=8001.
 
-[ci]: https://about.gitlab.com/gitlab-ci/
-[index.html]: https://gitlab.com/pages/plain-html/blob/master/public/index.html
-[userpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#user-or-group-pages
-[projpages]: https://docs.gitlab.com/ce/user/project/pages/introduction.html#project-pages
