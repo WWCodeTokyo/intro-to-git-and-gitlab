@@ -71,4 +71,3 @@ $ npm start
 6. Open http://localhost:8000 to view your presentation
 
 You can change the port by using npm start -- --port=8001.
-
