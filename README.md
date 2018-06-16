@@ -27,6 +27,13 @@ In this workshop we'll cover:
  - set up a free gitlab account
  - create an SSH Key
  - the basics of collaborating on projects with other developers
+ - 
+
+### To view the presentation in gitlab pages:
+
+Go to the following URL: [https://sarrahvesselov.gitlab.io/intro-to-git/](https://sarrahvesselov.gitlab.io/intro-to-git/)
+
+Use the 'Instructor Notes' located in the [Wiki of this project](https://gitlab.com/sarrahvesselov/intro-to-git/wikis/home) to walk through the exercises.
 
 
 ### To run the presentation locally:
