@@ -124,6 +124,9 @@
 					</table>
 					<aside class="notes">
 						Branches allow each developer to "branch" off of master to work independently. Later on, they will be able to merge their changes back into the master branch or merge changes made to master into their branch.
+
+						Common question: What is the difference between a branch and a fork? Branching and forking are two ways of diverging from the main code. A branch, like a branch of a tree, remains part of the original repo. The master and the branch know and rely on each other. 
+						A fork is independent from the original repo. If the original repo is deleted, the fork remains. If you fork a repo, you get that repo and all of its branches.
 					</aside>
 				</section>
 				<!-- Slide 8 -->
@@ -135,10 +138,49 @@
 				</section>
 				<!-- Slide 9 -->
 				<section>
+					<h5>Check your computer for Git</h5>
+					<pre>
+						<code data-trim data-noescape>
+							git --version
+						</code>
+					</pre>
+					<small>** No need to type in the $, this just indicates it is a shell command.</small>
+					<aside class="notes">
+						*INSTRUCTOR: Walk participants through commands on screen **explain that they do not have to type in the $, this just indicates it is a shell command.
+						<br><br>
+						It is time to get started. Let's check and see if you have Git. Run appropriate command to check. The command is the same for Mac or Windows.
+						<br><br>
+						If your terminal responds with a message like this: "git version 2.0.1", you have an official version installed.
+						<br><br>
+						If you're prompted to install Xcode, or the command line developer tools, you either do not have git installed, or don't have it in your $PATH variable.
+						<br><br>
+						For Mac users: If you get a message like "git version 1.9.3 (Apple Git-50)", you have Git installed from Apple (through Xcode or the command line developer tools), and can most likely benefit from installing the latest build directly from the official Git website.
+					</aside>
+				</section>
+				<!-- Slide 9 -->
+				<section>
 					<a href="https://git-scm.com/downloads" target="_blank"><img src="images/download-git.png" alt="Download Git"></a>
 					<small>Download Git: https://git-scm.com/downloads</small>
 					<aside class="notes">
 						Direct the participants to navigate to the download URL and download Git. Remember, Windows users will need to use Git Bash instead of Terminal.
+						<br><br>
+						This link has instructions on installing Git Bash: http://www.techoism.com/how-to-install-git-bash-on-windows/
+	
+					</aside>
+				</section><!-- Slide 10 -->
+				<section>
+					<div>
+						<h5>Check for a default <span class="u-orange">name</span> Git will use when you commit</h5>
+						<pre>
+							<code data-trim data-noescape>
+								$ git config --list
+							</code>
+						</pre>
+					</div>
+					<aside class="notes">
+						Each commit you make should be connected to your name and email. Let's see if you have set up a default name and email (if you just installed Git, you can skip this step!).
+						<br><br>
+						If you have configured a name and email, they will be listed in the terminal after running this command.
 					</aside>
 				</section>
 				<!-- Slide 10 -->
@@ -159,10 +201,9 @@
 							</code>
 						</pre>
 					</div>
+					<small>** The quotes are necessary! They indicate that the words inside the quotes are a string and not a command.</small>
 					<aside class="notes">
 						Now that you have Git installed let's customize your Git environment. We will start by setting your username and email address. You only have to do this once, and you can update the information whenever you want by using the same commands. 
-						<br><br>
-						*INSTRUCTOR: Walk participants through commands on screen **explain that they do not have to type in the $, this just indicates it is a shell command.
 						<br><br>
 						The --global option is what makes this something you only need to do once. You can override this with a different name or email address for a specific project by running the command without the --global option inside that project.
 					</aside>
@@ -176,7 +217,7 @@
 						</code>
 					</pre>
 					<aside class="notes">
-						You can check the settings you just made by running the config-list command.
+						You can check the settings you just made by running the config-list command again.
 					</aside>
 				</section>
 				<!-- Slide 12 -->
@@ -282,7 +323,7 @@
 						<h5>Tell Git to <span class="u-orange">track</span> our file. Then check it's  <span class="u-orange">status</span></h5>
 						<pre>
 							<code data-trim data-noescape>
-								git add my-file
+								git add my-file.txt
 								git status
 							</code>
 						</pre>
