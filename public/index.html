@@ -141,7 +141,7 @@
 					<h5>Check your computer for Git</h5>
 					<pre>
 						<code data-trim data-noescape>
-							git --version
+							$ git --version
 						</code>
 					</pre>
 					<small>** No need to type in the $, this just indicates it is a shell command.</small>
@@ -242,7 +242,7 @@
 						<h5>If you are <span class="u-orange">not</span> in your root directory, no worries. <span class="u-orange">Run this!</span></h5>
 						<pre>
 							<code data-trim data-noescape>
-								cd ~/
+								$ cd ~/
 							</code>
 						</pre>
 					</div>
@@ -264,7 +264,7 @@
 						<h5>Move into <span class="u-orange">your new repo</h5>
 						<pre>
 							<code data-trim data-noescape>
-								cd my-first-repo
+								$ cd my-first-repo
 							</code>
 						</pre>
 					</div>
@@ -272,7 +272,7 @@
 						<h5>Initialize your repository with <span class="u-orange">Git</h5>
 						<pre>
 							<code data-trim data-noescape>
-								git init
+								$ git init
 							</code>
 						</pre>
 					</div>
@@ -292,7 +292,7 @@
 					<h5>Let's check the status of our <span class="u-orange">Git Repo</span>.</h5>
 					<pre>
 						<code data-trim data-noescape>
-							git status
+							$ git status
 						</code>
 					</pre>
 					<aside class="notes">
@@ -323,8 +323,8 @@
 						<h5>Tell Git to <span class="u-orange">track</span> our file. Then check it's  <span class="u-orange">status</span></h5>
 						<pre>
 							<code data-trim data-noescape>
-								git add my-file.txt
-								git status
+								$ git add my-file.txt
+								$ git status
 							</code>
 						</pre>
 					</div>
@@ -345,7 +345,7 @@
 					<h5>Time to <span class="u-orange">commit</span>!</h5>
 					<pre>
 						<code data-trim data-noescape>
-							git commit -m "initial commit"
+							$ git commit -m "initial commit"
 						</code>
 					</pre>
 					<aside class="notes">
@@ -405,7 +405,7 @@
 					<h5>Let's look at what <span class="u-orange">we've done</span></h5>
 					<pre>
 						<code data-trim data-noescape>
-							git log
+							$ git log
 						</code>
 					</pre>
 					<div class="fragment fade-left">
@@ -430,7 +430,7 @@
 					<div class="fragment fade-left">
 						<pre>
 							<code data-trim data-noescape>
-								git checkout my-file.txt
+								$ git checkout my-file.txt
 							</code>
 						</pre>
 					</div>
@@ -456,7 +456,7 @@
 					<div class="fragment fade-left">
 						<pre>
 							<code data-trim data-noescape>
-								git add my-file.txt
+								$ git add my-file.txt
 							</code>
 						</pre>
 					</div>
@@ -464,7 +464,7 @@
 						<h5>Let's <span class="u-orange">fix it</span> !</h5>
 						<pre>
 							<code data-trim data-noescape>
-								git reset HEAD my-file.txt
+								$ git reset HEAD my-file.txt
 							</code>
 						</pre>
 					</div>
@@ -490,8 +490,8 @@
 					<div class="fragment fade-left">
 						<pre>
 							<code data-trim data-noescape>
-								git add my-file.txt
-								git commit -m "changing and commiting text"
+								$ git add my-file.txt
+								$ git commit -m "changing and commiting text"
 							</code>
 						</pre>
 					</div>
@@ -499,8 +499,8 @@
 					   <h5>Let's <span class="u-orange">fix it</span> !</h5>
 						<pre>
 							<code data-trim data-noescape>
-								git log
-								git reset HASH or git reset --hard HASH
+								$ git log
+								$ git reset HASH or git reset --hard HASH
 							</code>
 						</pre>
 					</div>
@@ -616,7 +616,7 @@
 						<h5>Windows Command Prompt:</h5>
 						<pre>
 							<code data-trim data-noescape>
-								type %userprofile%\.ssh\id_rsa.pub
+								$ type %userprofile%\.ssh\id_rsa.pub
 							</code>
 						</pre>
 					</div>
@@ -624,7 +624,7 @@
 						<h5>Git Bash on Windows / GNU/Linux / macOS / PowerShell:</h5>
 						<pre>
 							<code data-trim data-noescape>
-								cat ~/.ssh/id_rsa.pub
+								$ cat ~/.ssh/id_rsa.pub
 							</code>
 						</pre>
 					</div>
@@ -656,7 +656,7 @@
 					<div class="fragment fade-left">
 						<pre>
 							<code data-trim data-noescape>
-								ssh-keygen -t rsa -C "your.email@example.com" -b 4096
+								$ ssh-keygen -t rsa -C "your.email@example.com" -b 4096
 							</code>
 						</pre>
 					</div>
@@ -730,7 +730,7 @@
 					<div>
 						<pre>
 							<code data-trim data-noescape>
-								pbcopy < ~/.ssh/id_rsa.pub
+								$ pbcopy < ~/.ssh/id_rsa.pub
 							</code>
 						</pre>
 					</div>
@@ -738,7 +738,7 @@
 					<div>
 						<pre>
 							<code data-trim data-noescape>
-								type %userprofile%\.ssh\id_rsa.pub | clip
+								$ type %userprofile%\.ssh\id_rsa.pub | clip
 							</code>
 						</pre>
 					</div>
@@ -746,7 +746,7 @@
 					<div>
 						<pre>
 							<code data-trim data-noescape>
-								cat ~/.ssh/id_rsa.pub | clip
+								$ cat ~/.ssh/id_rsa.pub | clip
 							</code>
 						</pre>
 					</div>
@@ -891,7 +891,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git clone PASTE SSH HERE
+									$ git clone PASTE SSH HERE
 								</code>
 							</pre>
 						</div>
@@ -933,7 +933,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									checkout -b BRANCHNAME
+									$ checkout -b BRANCHNAME
 								</code>
 							</pre>
 						</div>
@@ -943,7 +943,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git branch BRANCHNAME
+									$ git branch BRANCHNAME
 								</code>
 							</pre>
 						</div>
@@ -977,7 +977,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git status
+									$ git status
 								</code>
 							</pre>
 						</div>
@@ -1005,7 +1005,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git add README.md
+									$ git add README.md
 								</code>
 							</pre>
 						</div>
@@ -1015,7 +1015,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git status
+									$ git status
 								</code>
 							</pre>
 						</div>
@@ -1045,7 +1045,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git commit -m "details of the change made"
+									$ git commit -m "details of the change made"
 								</code>
 							</pre>
 						</div>
@@ -1055,7 +1055,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git status
+									$ git status
 								</code>
 							</pre>
 						</div>
@@ -1088,7 +1088,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git push
+									$ git push
 								</code>
 							</pre>
 						</div>
@@ -1120,7 +1120,7 @@
 					<div>
 						<pre>
 							<code data-trim data-noescape>
-									git push --set-upstream origin [BRANCHNAME]
+									$ git push --set-upstream origin [BRANCHNAME]
 							</code>
 						</pre>
 						<pre>
@@ -1197,7 +1197,7 @@
 					<div>
 						<pre>
 							<code data-trim data-noescape>
-								git checkout master
+								$ git checkout master
 							</code>
 						</pre>
 					</div>
@@ -1206,7 +1206,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git pull
+									$ git pull
 								</code>
 							</pre>
 						</div>
@@ -1216,7 +1216,7 @@
 						<div>
 							<pre>
 								<code data-trim data-noescape>
-									git status
+									$ git status
 								</code>
 							</pre>
 						</div>
