@@ -157,7 +157,7 @@
 						For Mac users: If you get a message like "git version 1.9.3 (Apple Git-50)", you have Git installed from Apple (through Xcode or the command line developer tools), and can most likely benefit from installing the latest build directly from the official Git website.
 					</aside>
 				</section>
-				<!-- Slide 9 -->
+				<!-- Slide 10 -->
 				<section>
 					<a href="https://git-scm.com/downloads" target="_blank"><img src="images/download-git.png" alt="Download Git"></a>
 					<small>Download Git: https://git-scm.com/downloads</small>
@@ -167,7 +167,7 @@
 						This link has instructions on installing Git Bash: http://www.techoism.com/how-to-install-git-bash-on-windows/
 	
 					</aside>
-				</section><!-- Slide 10 -->
+				</section><!-- Slide 11 -->
 				<section>
 					<div>
 						<h5>Check for a default <span class="u-orange">name</span> Git will use when you commit</h5>
@@ -183,7 +183,7 @@
 						If you have configured a name and email, they will be listed in the terminal after running this command.
 					</aside>
 				</section>
-				<!-- Slide 10 -->
+				<!-- Slide 12 -->
 				<section>
 					<div>
 						<h5>Set the default <span class="u-orange">name</span> Git will use when you commit</h5>
@@ -208,7 +208,7 @@
 						The --global option is what makes this something you only need to do once. You can override this with a different name or email address for a specific project by running the command without the --global option inside that project.
 					</aside>
 				</section>
-				<!-- Slide 11 -->
+				<!-- Slide 13 -->
 				<section>
 					<h5>View your <span class="u-orange">config</span> settings</h5>
 					<pre>
@@ -220,7 +220,7 @@
 						You can check the settings you just made by running the config-list command again.
 					</aside>
 				</section>
-				<!-- Slide 12 -->
+				<!-- Slide 14 -->
 				<section>
 					<h5>First, let's get our bearings.</h5> 
 					<pre>
@@ -234,7 +234,7 @@
 						Run the 'ls' command. This command will list the contents of the directory in which you are currently.
 					</aside>
 				</section>
-				<!-- Slide 13 -->
+				<!-- Slide 15 -->
 				<section>
 					<h5>If you are in your <span class="u-orange">root directory </span>you should see something like this.</h5>
 					<img src="images/home-directory.png" alt="home directory" style="width: 650px; height: auto; margin-bottom: 50px;">
@@ -252,7 +252,7 @@
 						If you are not in your root directory, you can get there by running the 'change directory' command with the tilde.
 					</aside>
 				</section>
-				<!-- Slide 14 -->
+				<!-- Slide 16 -->
 				<section>
 				    <h5>Make your first Git Repo!</h5> 
 					<pre>
@@ -287,7 +287,7 @@
 						*INSTRUCTOR: A lot is going on behind the scenes here that may be overwhelming for those just learning. A .git directory with the necessary subdirectories and an initial HEAD file is created. In short, this is everything needed to create a master branch and start tracking changes.
 					</aside>
 				</section>
-				<!-- Slide 15 -->
+				<!-- Slide 17 -->
 				<section>
 					<h5>Let's check the status of our <span class="u-orange">Git Repo</span>.</h5>
 					<pre>
@@ -303,7 +303,7 @@
 						*They should see "On branch Master / Initial commit/nothing to commit (create/copy files and use "git add" to track."
 					</aside>
 				</section>
-				<!-- Slide 16 -->
+				<!-- Slide 18 -->
 				<section>
 					<h5>Let's create a file and add it to<span class="u-orange"> your repo</span>.</h5>
 					 <pre>
@@ -340,7 +340,7 @@
 						Congrats! Your file is now being tracked by Git!
 					</aside>
 				</section>
-				<!-- Slide 17 -->
+				<!-- Slide 19 -->
 				<section>
 					<h5>Time to <span class="u-orange">commit</span>!</h5>
 					<pre>
@@ -354,14 +354,14 @@
 						If not, the command line will open VIM. Escaping VIM, the difficulty of escaping VIM that is a standard development joke. (** You may want to cover how to escape VIM ).
 					</aside>
 				</section>
-				<!-- Slide 18 -->
+				<!-- Slide 20 -->
 				<section>
 					<h3>Phew! That was a lot. <span class="u-orange">Let's review</span> !</h3>
 					<aside class="notes">
 						*INSTRUCTOR: Now is an excellent time to make sure everyone is caught up and in the same place. Reassure anyone that isn't and get them caught up before proceeding to the next slide.
 					</aside>
 				</section>
-				<!-- Slide 19 -->
+				<!-- Slide 21 -->
 				<section>
 					<table>
 						<tr class="fragment fade-left">
@@ -400,7 +400,7 @@
 						** What is a hash? - Git uses SHA-1 hashes. An SHA-1 is an algorithm that takes some data as input and generates a unique 40 character string from it. That means each commit is 100% unique.
 					</aside>
 				</section>
-				<!-- Slide 20 -->
+				<!-- Slide 22 -->
 				<section>
 					<h5>Let's look at what <span class="u-orange">we've done</span></h5>
 					<pre>
@@ -424,7 +424,7 @@
 						The log command will show you the commit logs. You should see something that looks like this.
 					</aside>
 				</section>
-				<!-- Slide 21 -->
+				<!-- Slide 23 -->
 				<section>
 					<h5>Let's make <span class="u-orange">a local mistake</span> .</h5>
 					<div class="fragment fade-left">
@@ -450,7 +450,7 @@
 						You made changes to the file but never committed them to the index. Until you commit them, they only exist locally. It is important to remember this as you work with Git. Remember to commit your changes frequently.
 				</aside>
 				</section>
-				<!-- Slide 22 -->
+				<!-- Slide 24 -->
 				<section>
 					<h5>Let's make <span class="u-orange">a staged mistake</span> .</h5>
 					<div class="fragment fade-left">
@@ -484,7 +484,7 @@
 						This command tells Git to unstage the file and set the index of the file back to the last HEAD. HEAD is the name given to the commit from which the working tree's current state was initialized. Your changes still exist in the file but they are no longer staged in the index. Running git status will show the unstaged changes. *INSTRUCTOR: This may take further exposition as HEAD can be a confusing idea for beginners)
 					</aside>
 				</section>
-				<!-- Slide 23 -->
+				<!-- Slide 25 -->
 				<section>
 					<h5>Let's make <span class="u-orange">a commited mistake</span> .</h5>
 					<div class="fragment fade-left">
@@ -524,7 +524,7 @@
 						What just happened? Well, we had already committed the change which meant that we could not simply checkout the file to undo the change. We had to go a step further and tell Git to reset the last commit. This command rewinds your repository’s history all the way back to the specified hash. git reset preserves the working directory, the commits are gone, but the contents are still on disk. Revert is the safest option, but sometimes, you’ll want to “undo” the commits and the changes in one move—that’s what --hard does.
 					</aside>
 				</section>
-				<!-- Slide 24 -->
+				<!-- Slide 26 -->
 				<section>
 					<h3>Git &amp; GitLab</h3>
 					<h4>Git &ne; GitLab</h4>
@@ -532,7 +532,7 @@
 						Git, GitLab...what's the difference?
 					</aside>
 				</section>
-				<!-- Slide 25 -->
+				<!-- Slide 27 -->
 				<section>
 					<h3>GitLab</h3>
 					<ul>
@@ -550,7 +550,7 @@
 						*INSTRUCTOR: Some may ask if GitLab is the same as GitHub, we get that a lot! Explain that they are similar in that they both allow you to host and share code.
 					</aside>
 				</section>
-				<!-- Slide 26 -->
+				<!-- Slide 28 -->
 				<section>
 					<h3>GitLab's Awesome Features</h3>
 					<ul>
@@ -564,7 +564,7 @@
 						GitLab has many great features, here are just a few.
 					</aside>
 				</section>
-				<!-- Slide 27 -->
+				<!-- Slide 29 -->
 				<section>
 					<h3>Setup Account with GitLab</h3>
 					<img src="images/gitlab-signin.png" alt="GitLab Sign-in" style="max-height: 500px; width: auto">
@@ -576,7 +576,7 @@
 						**If they already have a GitHub or bitbucket account, let them know they can sign-in using that account and import projects.
 					</aside>
 				</section>
-				<!-- Slide 28 -->
+				<!-- Slide 30 -->
 				<section>
 					<h3>First look at GitLab</h3>
 					<img src="images/welcome-to-gitlab.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
@@ -596,7 +596,7 @@
 						You can also explore public projects or learn more about GitLab using our documentation.
 					</aside>
 				</section>
-				<!-- Slide 29 -->
+				<!-- Slide 31 -->
 				<section>
 					<h3>Add your SSH key</h3>
 					<img src="images/ssh-key.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
@@ -609,7 +609,7 @@
 						Step by step documentation here: https://docs.gitlab.com/ee/ssh/README.html#doc-nav
 					</aside>
 				</section>
-				<!-- Slide 30 -->
+				<!-- Slide 32 -->
 				<section>
 					<h3>Check for an <span class="u-orange">existing SSH</span> key</h3>
 					<div class="fragment fade-left">
@@ -634,7 +634,7 @@
 						In your terminal, run the following command (based on your OS). 
 					</aside>
 				</section>
-				<!-- Slide 31 -->
+				<!-- Slide 33 -->
 				<section>
 					<h3>Existing SSH key</h3>
 					<div class="fragment fade-left">
@@ -649,7 +649,7 @@
 						If you see a string starting with 'SSH-RSA' (pictured here), then you have an existing SSH key pair. You can skip this next part!
 					</aside>
 				</section>
-				<!-- Slide 32 -->
+				<!-- Slide 34 -->
 				<section>
 					<h3>Generate a <span class="u-orange">new SSH key</span> pair</h3>
 					<h5>Git Bash on Windows / GNU/Linux / macOS / PowerShell:</h5>
@@ -678,7 +678,7 @@
 						Press enter to use the suggested path.
 					</aside>
 				</section>
-				<!-- Slide 33 -->
+				<!-- Slide 35 -->
 				<section>
 					<h3>Passphrase</h3>
 					<div class="fragment fade-left">
@@ -694,7 +694,7 @@
 						Once you have input a file path, you will be prompted to input a password to secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required, and you can skip creating a password by pressing enter.
 					</aside>
 				</section>
-				<!-- Slide 34 -->
+				<!-- Slide 36 -->
 				<section>
 					<h3>Your key</h3>
 					<div class="fragment fade-left">
@@ -723,7 +723,7 @@
 						This funny looking pattern is your SSH Key!     
 					</aside>
 				</section>
-				<!-- Slide 35 -->
+				<!-- Slide 37 -->
 				<section>
 					<h3>Copy the <span class="u-orange">public SSH key</span></h3>
 					<h5>macOS:</h5>
@@ -756,7 +756,7 @@
 						For those of you that already had an SSH key pair, you will need to do these next steps as well.
 					</aside>
 				</section>
-				<!-- Slide 36 -->
+				<!-- Slide 38 -->
 				<section>
 					<h3>Add your key to <span class="u-orange">your profile</span></h3>
 					<img src="images/ssh-key.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
@@ -768,7 +768,7 @@
 						If you manually copied your public SSH key make sure you copied the entire key starting with SSH-RSA and ending with your email.
 					</aside>
 				</section>
-				<!-- Slide 37 -->
+				<!-- Slide 39 -->
 				<section>
 					<h3>GitLab <span class="u-orange">Groups</span></h3>
 					<img src="images/wwc-group.png" alt="WWC Gitlab Group" style="max-height: 500px; width: auto">
@@ -786,7 +786,7 @@
 						*INSTRUCTOR: If time allows, you may want to take this opportunity to point out key features of the interface. 
 					</aside>
 				</section>
-				<!-- Slide 38 -->
+				<!-- Slide 40 -->
 				<section>
 					<h3>GitLab <span class="u-orange">Projects</span></h3>
 					<img src="images/intro-git-project.png" alt="WWC Git Project" style="max-height: 500px; width: auto">
@@ -800,7 +800,7 @@
 						Find and choose the 'Intro to Git and GitLab group.'
 					</aside>
 				</section>
-				<!-- Slide 39 -->
+				<!-- Slide 41 -->
 				<section>
 					<h3>Forking a <span class="u-orange">Project</span></h3>
 					<img src="images/fork-button.png" alt="WWC Git Project" style="max-height: 500px; width: auto">
@@ -814,14 +814,14 @@
 						Start by clicking the 'fork' button at the top of the project page. 
 					</aside>
 				</section>
-				<!-- Slide 40 -->
+				<!-- Slide 42 -->
 				<section>
 					<img src="images/fork-screen.png" alt="Fork screen" style="max-height: 500px; width: auto">
 					<aside class="notes">
 						Once you do that, you'll be presented with a screen where you can choose the namespace under which you'd like to place the fork. Only namespaces (groups and your own namespace) where you have write access to, will be shown. Click on the namespace to create your fork there.
 					</aside>
 				</section>
-				<!-- Slide 41 -->
+				<!-- Slide 43 -->
 				<section>
 					<h3>Success!</h3>
 					<img src="images/fork-complete.png" alt="Fork screen" style="max-height: 500px; width: auto">
@@ -835,7 +835,7 @@
 						So, before we start, let's remove the forked relationship.
 					</aside>
 				</section>
-				<!-- Slide 42 -->
+				<!-- Slide 44 -->
 				<section>
 					<h3>Remove <span class="u-orange">Forked</span> Relationship</h3>
 					<h5>Settings/General</h5>
@@ -844,7 +844,7 @@
 						Go to Settings/General.
 					</aside>
 				</section>
-				<!-- Slide 43 -->
+				<!-- Slide 45 -->
 				<section>
 					<h5>Settings/General/Advanced</h5>
 					<img src="images/settings-advanced.png" alt="Settings/Advanced" style="max-height: 500px; width: auto">
@@ -856,7 +856,7 @@
 						Once expanded, find the 'Remove Forked Relationship' option.
 					</aside>
 				</section>
-				<!-- Slide 44 -->
+				<!-- Slide 46 -->
 				<section>
 					<h5>Confirmation Modal</h5>
 					<img src="images/fork-modal.png" alt="Fork Modal" style="max-height: 500px; width: auto">
@@ -864,7 +864,7 @@
 						A modal will pop up to confirm the removal. You must type in the name of the project to complete the action. This action prevents users from accidentally removing a forked relationship.
 					</aside>
 				</section>
-				<!-- Slide 45 -->
+				<!-- Slide 47 -->
 				<section>
 					<h5>Success!</h5>
 					<img src="images/fork-confirmation.png" alt="Fork Removed" style="max-height: 500px; width: auto">
@@ -872,7 +872,7 @@
 						Once complete, you will see an alert telling you that the forked relationship has been removed.
 					</aside>
 				</section>
-				<!-- Slide 46 -->
+				<!-- Slide 48 -->
 				<section>
 					<h3>Cloning</h3>
 					<img src="images/clone-repo.png" alt="Clone Repo" style="max-height: 400px; width: auto">
@@ -884,7 +884,7 @@
 						While you are at the Project tab, select HTTPS or SSH from the drop-down menu and copy the link using the 'Copy to clipboard' button (you'll have to paste it on your shell in the next step).
 					</aside>
 				</section>
-				<!-- Slide 47 -->
+				<!-- Slide 49 -->
 				<section>
 					<h3>Clone<span class="u-orange"> locally</span></h3>
 					<div>
@@ -926,7 +926,7 @@
 						Then, move inside your cloned repo by using the change directories (cd) command.
 					</aside>
 				</section>
-				<!-- Slide 48 -->
+				<!-- Slide 50 -->
 				<section>
 					<h5>Create a <span class="u-orange">new branch</span> &amp; <span class="u-orange">checkout</span></h5>
 					<div>
@@ -956,7 +956,7 @@
 						You may see the following method for creating a branch. This command will create a branch, but you will have to check it out manually.
 					</aside>
 				</section>
-				<!-- Slide 49 -->
+				<!-- Slide 51 -->
 				<section>
 					<h3>Make a <span class="u-orange">change</span></h3>
 					<p>Open up the README.md file using your favorite code editor.</p>
@@ -970,7 +970,7 @@
 						*INSTRUCTOR: Instruct the class to make a change at the end of the README file. It doesn't matter what it is. Add their name, a sentence, or delete content. Make sure they hit save!
 					</aside>
 				</section>
-				<!-- Slide 50 -->
+				<!-- Slide 52 -->
 				<section>
 					<h5>Check  <span class="u-orange">git status</span></h5>
 					<div>
@@ -998,7 +998,7 @@
 						You should see the following output in the terminal, marked in red. This message means that changes have been made but have not been staged for tracking yet.
 					</aside>
 				</section>
-				<!-- Slide 51 -->
+				<!-- Slide 53 -->
 				<section>
 					<h5>Stage file for <span class="u-orange">tracking</span></h5>
 					<div>
@@ -1038,7 +1038,7 @@
 						You should see the following output in the terminal, marked in green.
 					</aside>
 				</section>
-				<!-- Slide 52 -->
+				<!-- Slide 54 -->
 				<section>
 					<h5>Time to <span class="u-orange">commit!</span></h5>
 					<div>
@@ -1081,7 +1081,7 @@
 						This time, you should see the name of the branch you are on. You should also know that you are ahead of the origin of that branch by one commit. The 'Origin' is the branch on the server. Your local copy contains one change that is not yet on the server copy.
 					</aside>
 				</section>
-				<!-- Slide 53 -->
+				<!-- Slide 55 -->
 				<section>
 					<h5>Let's <span class="u-orange">push!</span></h5>
 					<div>
@@ -1114,7 +1114,7 @@
 						We created the branch in our local working repository. Your local branches aren’t automatically synchronized to the remotes server — you have to push the branches you want to share explicitly.
 					</aside>
 				</section>
-				<!-- Slide 54 -->
+				<!-- Slide 56 -->
 				<section>
 					<h5>Set Origin</h5>
 					<div>
@@ -1135,7 +1135,7 @@
 						You should see a flurry of activity ending with the following message: "Branch [BRANCHNAME] set up to track remote branch test-branch from the origin." 
 					</aside>
 				</section>
-				<!-- Slide 55 -->
+				<!-- Slide 57 -->
 				<section>
 					<h3>Our First <span class="u-orange">Merge Request</span></h3>
 					<img src="images/gitlab-merge-request.png" alt="Merge Request" style="max-height: 500px; width: auto">
@@ -1145,7 +1145,7 @@
 						Go back to your project homepage in GitLab. At the top of the screen, you should see a message about your recent changes to the branch. This message includes a button to create a merge request. Go ahead and press it!
 					</aside>
 				</section>
-				<!-- Slide 56 -->
+				<!-- Slide 58 -->
 				<section>
 					<h5>Fill in the <span class="u-orange">details</span></h5>
 					<img src="images/merge-request-screen.png" alt="Merge Request" style="max-height: 500px; width: auto">
@@ -1161,7 +1161,7 @@
 						At the very bottom of the page, you will see the 'Source Branch' and the 'Target Branch.' The 'Source Branch' is the branch you are on., It is the 'source' of the changes. The 'Target Branch' is the branch into which the changes will be merged. It is the 'target' for the changes.
 					</aside>
 				</section>
-				<!-- Slide 57 -->
+				<!-- Slide 59 -->
 				<section>
 					<h5>Merge your <span class="u-orange">Merge Request</span></h5>
 					<img src="images/merge-merge-request.png" alt="Merge Request" style="max-height: 500px; width: auto">
@@ -1171,7 +1171,7 @@
 						To see the changes made to the code, click on the 'Changes' tab.
 					</aside>
 				</section>
-				<!-- Slide 58 -->
+				<!-- Slide 60 -->
 				<section>
 					<h5>See your <span class="u-orange">Changes</span></h5>
 					<img src="images/merge-request-changes.png" alt="Merge Request Changes" style="max-height: 500px; width: auto">
@@ -1183,7 +1183,7 @@
 						*INSTRUCTOR: Instruct participants to click the 'Merge' button in the MR widget. You may want to explain the 'remove source' and 'squash commit' options. For simplicity, they should not choose those options.
 					</aside>
 				</section>
-				<!-- Slide 59 -->
+				<!-- Slide 61 -->
 				<section>
 					<h5>Success!</h5>
 					<img src="images/merge-confirmation.png" alt="Merge Confirmation" style="max-height: 500px; width: auto">
@@ -1191,7 +1191,7 @@
 						Once you have clicked 'merge,' you will see the status change in the merge request widget to 'merged.'
 					</aside>
 				</section>
-				<!-- Slide 60 -->
+				<!-- Slide 62 -->
 				<section>
 					<h5>Checkout <span class="u-orange">Master</span></h5>
 					<div>
@@ -1231,7 +1231,7 @@
 						Run 'git status' one last time to make sure you are all up to date.
 					</aside>
 				</section>
-				<!-- Slide 61 -->
+				<!-- Slide 63 -->
 				<section>
 					<iframe src="https://giphy.com/embed/ehhuGD0nByYxO" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
 					<aside class="notes">
