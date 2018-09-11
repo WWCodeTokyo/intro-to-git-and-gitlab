@@ -31,9 +31,9 @@ In this workshop we'll cover:
 
 ### To view the presentation in gitlab pages:
 
-Go to the following URL: [https://sarrahvesselov.gitlab.io/intro-to-git/](https://sarrahvesselov.gitlab.io/intro-to-git/)
+Go to the following URL: [https://sarrahvesselov.gitlab.io/intro-to-git/](https://women-who-code.gitlab.io/intro-to-git-and-gitlab)
 
-Use the 'Instructor Notes' located in the [Wiki of this project](https://gitlab.com/sarrahvesselov/intro-to-git/wikis/home) to walk through the exercises.
+Use the 'Instructor Notes' located in the [Wiki of this project](https://gitlab.com/women-who-code/intro-to-git-and-gitlab/wikis/home) to walk through the exercises.
 
 
 ### To run the presentation locally:
