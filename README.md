@@ -31,7 +31,7 @@ In this workshop we'll cover:
 
 ### To view the presentation in gitlab pages:
 
-Go to the following URL: [https://sarrahvesselov.gitlab.io/intro-to-git/](https://women-who-code.gitlab.io/intro-to-git-and-gitlab)
+Go to the following URL: [https://women-who-code.gitlab.io/intro-to-git-and-gitlab](https://women-who-code.gitlab.io/intro-to-git-and-gitlab)
 
 Use the 'Instructor Notes' located in the [Wiki of this project](https://gitlab.com/women-who-code/intro-to-git-and-gitlab/wikis/instructor-notes) to walk through the exercises.
 
