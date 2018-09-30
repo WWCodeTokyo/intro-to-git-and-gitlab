@@ -27,7 +27,6 @@ In this workshop we'll cover:
  - set up a free gitlab account
  - create an SSH Key
  - the basics of collaborating on projects with other developers
- - 
 
 ### To view the presentation in gitlab pages:
 
@@ -50,10 +49,10 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
   $ git clone git@gitlab.com:sarrahvesselov/intro-to-git-gitlab.git
 ```
 
-3. Navigate to the reveal.js folder
+3. Navigate to the public folder
 
 ```sh
-$ cd reveal.js
+$ cd public
 ```
 
 4. Install dependencies
