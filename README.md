@@ -49,7 +49,13 @@ Some reveal.js features, like external Markdown and speaker notes, require that 
   $ git clone git@gitlab.com:sarrahvesselov/intro-to-git-gitlab.git
 ```
 
-3. Navigate to the public folder
+3. Navigate to the repo you just cloned
+
+```sh
+$ cd intro-to-git-and-gitlab
+```
+
+4. Navigate to the public folder inside the repo
 
 ```sh
 $ cd public
