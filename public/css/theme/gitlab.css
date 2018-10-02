@@ -10,28 +10,22 @@
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #5c35ae;
-  background: -moz-radial-gradient(center, circle cover, #5c35ae 0%, #5c35ae 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #5c35ae), color-stop(100%, #5c35ae));
-  background: -webkit-radial-gradient(center, circle cover, #5c35ae 0%, #5c35ae 100%);
-  background: -o-radial-gradient(center, circle cover, #5c35ae 0%, #5c35ae 100%);
-  background: -ms-radial-gradient(center, circle cover, #5c35ae 0%, #5c35ae 100%);
-  background: radial-gradient(center, circle cover, #5c35ae 0%, #5c35ae 100%);
-  background-color: #5c35ae; }
+  background: #fff;
+  background-color: #fff; }
 
 .reveal {
   font-family: "Open Sans", sans-serif;
   font-size: 30px;
   font-weight: normal;
-  color: #fff; }
+  color: #48484A; }
 
 ::selection {
-  color: #fff;
+  color: #48484A;
   background: rgba(79, 64, 28, 0.99);
   text-shadow: none; }
 
 ::-moz-selection {
-  color: #fff;
+  color: #48484A;
   background: rgba(79, 64, 28, 0.99);
   text-shadow: none; }
 
@@ -50,7 +44,7 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #fff;
+  color: #007a7c ;
   font-family: "Montserrat", Impact, sans-serif;
   font-weight: normal;
   line-height: 1.2;
@@ -70,7 +64,7 @@ body {
 
 .reveal h4 {
   font-size: 1em;
-  color: #e7ad52; }
+  color: #007a7c; }
 
 .reveal h5 {
   font-size: 0.8em;
@@ -218,14 +212,14 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #e7ad52;
+  color: #007a7c;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #f3d7ac;
+  color: #023738;
   text-shadow: none;
   border: none; }
 
@@ -237,7 +231,8 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px; }
+  margin: 15px 0px; 
+  border: 1px solid #007a7c; }
 
 .reveal section img.plain {
   border: 0;
@@ -250,21 +245,21 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #e7ad52;
+  border-color: #007a7c;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
 .reveal .controls {
-  color: #e7ad52; }
+  color: #007a7c; }
 
 /*********************************************
  * PROGRESS BAR
  *********************************************/
 .reveal .progress {
   background: rgba(0, 0, 0, 0.2);
-  color: #e7ad52; }
+  color: #007a7c; }
 
 .reveal .progress span {
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
@@ -275,7 +270,7 @@ body {
  * Utility
  *********************************************/
 .u-orange {
-  color: #e7ad52; }
+  color: #007a7c; }
 
 #u-url {
   background-color: rgba(22, 19, 19, 0.64);
