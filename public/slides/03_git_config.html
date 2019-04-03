@@ -1,0 +1,55 @@
+<!-- Slide 11 -->
+<section>
+  <div>
+    <h5>Check for a default <span class="u-orange">name</span> Git will use when you commit</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ git config --list
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Each commit you make should be connected to your name and email. Let's see if you have set up a default name and email (if you just installed Git, you can skip this step!).
+    <br><br>
+    If you have configured a name and email, they will be listed in the terminal after running this command.
+  </aside>
+</section>
+
+<!-- Slide 12 -->
+<section>
+  <div>
+    <h5>Set the default <span class="u-orange">name</span> Git will use when you commit</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ git config --global user.name "First Name Last Name"
+      </code>
+    </pre>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Set the default <span class="u-orange">email</span> Git will use when you commit</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ git config --global user.email "email@example.com"
+      </code>
+    </pre>
+  </div>
+  <small>** The quotes are necessary! They indicate that the words inside the quotes are a string and not a command.</small>
+  <aside class="notes">
+    Now that you have Git installed let's customize your Git environment. We will start by setting your username and email address. You only have to do this once, and you can update the information whenever you want by using the same commands.
+    <br><br>
+    The --global option is what makes this something you only need to do once. You can override this with a different name or email address for a specific project by running the command without the --global option inside that project.
+  </aside>
+</section>
+
+<!-- Slide 13 -->
+<section>
+  <h5>View your <span class="u-orange">config</span> settings</h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ git config --list
+    </code>
+  </pre>
+  <aside class="notes">
+    You can check the settings you just made by running the config-list command again.
+  </aside>
+</section>
