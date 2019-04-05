@@ -1,0 +1,78 @@
+<!-- Slide 14 -->
+<section>
+  <h5>First, let's get our bearings.</h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ ls
+    </code>
+  </pre>
+  <aside class="notes">
+    Next, we will make our first local git repository. Before we start, let's make sure we know where we are. Since you have not navigated anywhere, you should be in your root directory. The root directory is usually indicated by the '~' (tilde pronounced til-da)
+    <br><br>
+    Run the 'ls' command. This command will list the contents of the directory in which you are currently.
+  </aside>
+</section>
+
+<!-- Slide 15 -->
+<section>
+  <h5>If you are in your <span class="u-orange">root directory </span><br>you should see something like this.</h5>
+  <img src="images/home-directory.png" alt="home directory" style="width: 650px; height: auto; margin-bottom: 50px;">
+  <div class="fragment fade-left">
+    <h5>If you are <span class="u-orange">not</span> in your root directory, no worries. <span class="u-orange">Run this!</span></h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ cd ~/
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Your root directory stores all of the directories that belong under the logged in username. You should see things like 'Desktop,' 'Documents,' 'Downloads,' etc. (**Note, image shows MAC OS directory)
+    <br><br>
+    If you are not in your root directory, you can get there by running the 'change directory' command with the tilde.
+  </aside>
+</section>
+
+<!-- Slide 16 -->
+<section>
+  <h5>Make your first Git Repo!</h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ mkdir my-first-repo
+    </code>
+  </pre>
+  <div class="fragment fade-left">
+    <h5>Move into <span class="u-orange">your new repo</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ cd my-first-repo
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Once you are sure you are in your root directory, go ahead and run the following command to make your very first repository *INSTRUCTOR: You may want to explain that it is OK to CD to their Desktop, or another directory to create this folder.
+    <br><br>
+    Next, use the 'Change Directory' command to move inside the directory you just made.
+    You must be inside a folder to initialize Git.
+    <br><br>
+    Initialize your Git repository by running 'git init.' This command creates an empty Git repository. You should see a notice on the command line telling you. "Initialized empty Git repository in /Usesr/..."
+    <br><br>
+    *INSTRUCTOR: A lot is going on behind the scenes here that may be overwhelming for those just learning. A .git directory with the necessary subdirectories and an initial HEAD file is created. In short, this is everything needed to create a master branch and start tracking changes.
+  </aside>
+</section>
+
+<section>
+  <h5>Initialize your repository with <span class="u-orange">Git</h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ git init
+    </code>
+  </pre>
+
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        Initialized empty Git repository in /My/Path/my-first-repo/.git/
+      </code>
+    </pre>
+  </div>
+</section>

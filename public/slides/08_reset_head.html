@@ -1,0 +1,37 @@
+<!-- Slide 24 -->
+<section>
+  <h5>Let's make <span class="u-orange">a staged mistake</span> .</h5>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        $ git add my-file.txt
+      </code>
+    </pre>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Let's <span class="u-orange">fix it</span> !</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ git reset HEAD my-file.txt
+
+        Unstaged changes after reset:
+        M       my-file.txt
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    What happens if you added the file already? Remember, once a file is added, it is 'staged' in the index. That means Git is aware there has been a change added but not committed.
+    <br><br>
+    Let's give it a try. Open your text file again and add some text.
+    <br><br>
+    Next, add it to Git using 'git add.'
+    <br><br>
+    Whoops! We didn't want to add that. How do we fix it?
+    <br><br>
+    Run the next command, 'git reset HEAD my-file.txt.'
+    <br><br>
+    You should see a notification in the terminal which says: Unstaged changes after reset: my-file.txt
+    <br><br>
+    This command tells Git to unstage the file and set the index of the file back to the last HEAD. HEAD is the name given to the commit from which the working tree's current state was initialized. Your changes still exist in the file but they are no longer staged in the index. Running git status will show the unstaged changes. *INSTRUCTOR: This may take further exposition as HEAD can be a confusing idea for beginners)
+  </aside>
+</section>

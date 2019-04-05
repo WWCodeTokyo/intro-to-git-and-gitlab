@@ -1,0 +1,45 @@
+<!-- Slide 50 -->
+<section>
+  <h5>Create a <span class="u-orange">new branch</span> &amp; <span class="u-orange">checkout</span></h5>
+  <div>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git checkout -b BRANCHNAME
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Create branch <span class="u-orange">only</span></h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git branch BRANCHNAME
+        </code>
+      </pre>
+    </div>
+  </div>
+  <aside class="notes">
+    Now that we have our local working copy let's make some changes. It is not good practice to work directly in master. Master is often seen by the team as the 'Production Master.' That is to say; it is the final working version of the repo. All development should be done on a separate branch which is then merged into master once it has been reviewed.
+    <br><br>
+    Let's create a branch to work on using the following command. This command is two-in-one. It creates a new branch and checks it out at the same time. 'Checking out' a branch places you inside that branch.
+    <br><br>
+    You may see the following method for creating a branch. This command will create a branch, but you will have to check it out manually.
+  </aside>
+</section>
+<!-- Slide 51 -->
+<section>
+  <h3>Make a <span class="u-orange">change</span></h3>
+  <p>Open up the README.md file on your code editor.</p>
+  <img class="plain" src="images/vs-code_readme.png" height="400">
+  <aside class="notes">
+    We have our branch, let's go ahead a make a change to one of the files. This repo contains the presentation you see today, developed using reveal.js. Don't worry! You don't need to know any programming to make a change. We are going to make a simple change to the README file.
+    <br><br>
+    The README file contains information about the directory and its contents. The README file for this repo is written in markdown, a lightweight markup language with plain text formatting syntax.
+    <br><br>
+    Open the README file in an editor of your choice. *INSTRUCTOR: You may have to walk individuals through this process. They should have an editor like Atom, Sublime, or Visual Code installed already.
+    <br><br>
+    *INSTRUCTOR: Instruct the class to make a change at the end of the README file. It doesn't matter what it is. Add their name, a sentence, or delete content. Make sure they hit save!
+  </aside>
+</section>

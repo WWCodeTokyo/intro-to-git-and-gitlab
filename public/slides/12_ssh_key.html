@@ -1,0 +1,172 @@
+<!-- Slide 31 -->
+<section>
+  <h3>Add your SSH key</h3>
+  <img src="images/ssh-key.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
+  <div id="u-url">https://docs.gitlab.com/ee/ssh/README.html</div>
+  <aside class="notes">
+    Before we do anything, we need to set up your SSH Key. What is an SSH Key?
+    <br><br>
+    To push your changes to a GitLab server, you need a secure communication channel for sharing information. The SSH protocol provides this security and allows you to authenticate to the GitLab remote server without supplying your username or password each time.
+    <br><br>
+    Step by step documentation here: https://docs.gitlab.com/ee/ssh/README.html#doc-nav
+  </aside>
+</section>
+<!-- Slide 32 -->
+<section>
+  <h3>Check for an <span class="u-orange">existing SSH</span> key</h3>
+  <div class="fragment fade-left">
+    <h5>Git Bash on Windows / GNU/Linux / macOS / PowerShell:</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ cat ~/.ssh/id_rsa.pub
+      </code>
+    </pre>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Windows Command Prompt:</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ type %userprofile%\.ssh\id_rsa.pub
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Before generating a new SSH key pair, let's check to see if your system already has one.
+    <br><br>
+    In your terminal, run the following command (based on your OS).
+  </aside>
+</section>
+<!-- Slide 33 -->
+<section>
+  <h3>Existing SSH key</h3>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        ➜  ~ cat ~/.ssh/id_rsa.pub
+        ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAA.....
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    If you see a string starting with 'SSH-RSA' (pictured here), then you have an existing SSH key pair. You can skip this next part!
+  </aside>
+</section>
+<!-- Slide 34 -->
+<section>
+  <h3>Generate a <span class="u-orange">new SSH key</span> pair</h3>
+  <h5>Git Bash on Windows / GNU/Linux / macOS / PowerShell:</h5>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        $ ssh-keygen -t rsa -C "your.email@example.com" -b 4096
+      </code>
+    </pre>
+  </div>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        Generating public/private rsa key pair.
+        Enter file in which to save the key (/Users/yourname/.ssh/id_rsa):
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    If you don't see this string, then we need to go ahead and generate an SSH key pair.
+    <br><br>
+    Run the keygen command to generate the key pair.
+    <br><br>
+    You will see a prompt to enter the file path for where you want to save the file.
+    <br><br>
+    Press enter to use the suggested path.
+  </aside>
+</section>
+<!-- Slide 35 -->
+<section>
+  <h3>Passphrase</h3>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        Created directory '/Users/yourname/.ssh'.
+        Enter passphrase (empty for no passphrase):
+        Enter same passphrase again:
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Once you have input a file path, you will be prompted to input a password to secure your SSH key pair. It is a best practice to use a password for an SSH key pair, but it is not required, and you can skip creating a password by pressing enter.
+  </aside>
+</section>
+<!-- Slide 36 -->
+<section>
+  <h3>Your key</h3>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        Your identification has been saved in /Users/yourname/.ssh/id_rsa.
+        Your public key has been saved in /Users/yourname/.ssh/id_rsa.pub.
+        The key fingerprint is:
+        9b:7c:c0:e2:62:74:bf:6b:85:4f:61:8f:d31:0:ef:b7 your.email@example.com
+        The key's randomart image is:
+        +--[ RSA 2048]----+
+        |      .          |
+        | o  +  .         |
+        | .  o So B       |
+        |  . o +. += + .  |
+        |    o .. E +. o  |
+        |  . . B . o      |
+        |      .o .       |
+        +-----------------+
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Once you have completed this step, you will see something like this generated.
+    <br><br>
+    This funny looking pattern is your SSH Key!
+  </aside>
+</section>
+<!-- Slide 37 -->
+<section>
+  <h3>Copy the <span class="u-orange">public SSH key</span></h3>
+  <h5>macOS:</h5>
+  <div>
+    <pre>
+      <code data-trim data-noescape>
+        $ pbcopy < ~/.ssh/id_rsa.pub
+      </code>
+    </pre>
+  </div>
+  <h5>Windows Command Line:</h5>
+  <div>
+    <pre>
+      <code data-trim data-noescape>
+        $ type %userprofile%\.ssh\id_rsa.pub | clip
+      </code>
+    </pre>
+  </div>
+  <h5>Git Bash on Windows / Windows PowerShell:</h5>
+  <div>
+    <pre>
+      <code data-trim data-noescape>
+        $ cat ~/.ssh/id_rsa.pub | clip
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Now, we will need to copy the key so we can add it to our profile on GitLab.
+    <br><br>
+    For those of you that already had an SSH key pair, you will need to do these next steps as well.
+  </aside>
+</section>
+<!-- Slide 38 -->
+<section>
+  <h3>Add your key to <span class="u-orange">your profile</span></h3>
+  <img src="images/ssh-key.png" alt="Welcome to GitLab" style="max-height: 500px; width: auto">
+  <aside class="notes">
+    The final step is to add your public SSH key to GitLab.
+    <br><br>
+    Navigate to the 'SSH Keys' tab in your 'Profile Settings.' Paste your key in the 'Key' section and give it a relevant 'Title.' Use an identifiable title like 'Work Laptop - Windows 7' or 'Home MacBook Pro 15'.
+    <br><br>
+    If you manually copied your public SSH key make sure you copied the entire key starting with SSH-RSA and ending with your email.
+  </aside>
+</section>

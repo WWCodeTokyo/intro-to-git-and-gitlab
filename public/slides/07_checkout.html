@@ -1,0 +1,55 @@
+<section>
+  <h5>Open the TXT file on your code editor</h5>
+  <img class="plain" src="images/vs-code_project.png" height="500">
+</section>
+
+<section>
+  <h5>Let's make <span class="u-orange">a local mistake</span></h5>
+  <div class="fragment fade-left">
+    <img src="images/vs-code_file_change.png" height="500">
+  </div>
+  <aside class="notes">
+    Nobody's perfect. Let's walk through how to handle mistakes.
+    <br><br>
+    Earlier, we created a text file and committed it to be tracked by git. Open that file using notepad/text-edit (right click=> Open with).
+    <br><br>
+    Now, type something into the file and save it (ctrl+S).
+    <br><br>
+    Whoops! We made a mistake. We didn't mean to change that file. What can we do?!
+  </aside>
+</section>
+
+<!-- Slide 23 -->
+<section>
+  <h5>Let's revert the local changes</h5>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        $ git checkout my-file.txt
+      </code>
+    </pre>
+  </div>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        $ git status
+      </code>
+    </pre>
+  </div>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        On branch master
+        nothing to commit, working tree clean
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    <br><br>
+    In the terminal, type the command 'git checkout my-file.txt.' This command will update the files in your root working directory to match the version in the index.
+    <br><br>
+    Go ahead and check it. Close the text file (if still open) and then reopen it. The text you typed in should be gone. But Why?
+    <br><br>
+    You made changes to the file but never committed them to the index. Until you commit them, they only exist locally. It is important to remember this as you work with Git. Remember to commit your changes frequently.
+  </aside>
+</section>

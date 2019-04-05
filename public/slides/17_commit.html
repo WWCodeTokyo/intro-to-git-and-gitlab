@@ -1,0 +1,111 @@
+<!-- Slide 52 -->
+<section>
+  <h5>Check  <span class="u-orange">git status</span></h5>
+  <div>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git status
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Output</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          modified: README.md
+        </code>
+      </pre>
+    </div>
+  </div>
+  <aside class="notes">
+    Once you have made a change and saved it, go back to the terminal and use 'git status' to see if the changes were registered.
+    <br><br>
+    You should see the following output in the terminal, marked in red. This message means that changes have been made but have not been staged for tracking yet.
+  </aside>
+</section>
+<!-- Slide 53 -->
+<section>
+  <h5>Stage file for <span class="u-orange">tracking</span></h5>
+  <div>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git add README.md
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Check status</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git status
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Output</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          modified: README.md
+        </code>
+      </pre>
+    </div>
+  </div>
+  <aside class="notes">
+    Let's stage the file for tracking by adding it.
+    <br><br>
+    Next, recheck the Git status.
+    <br><br>
+    You should see the following output in the terminal, marked in green.
+  </aside>
+</section>
+<!-- Slide 54 -->
+<section>
+  <h5>Time to <span class="u-orange">commit!</span></h5>
+  <div>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git commit -m "details of the change made"
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Check status</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git status
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Output</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          On branch [BRANCHNAME]
+          Your branch is ahead of 'origin/[BRANCHNAME]' by 1 commit.
+            (use "git push" to publish your local commits)
+          nothing to commit, working tree clean
+        </code>
+      </pre>
+    </div>
+  </div>
+  <aside class="notes">
+    Commit your change and make sure to write a detailed commit message.
+    <br><br>
+    Next, recheck the Git status.
+    <br><br>
+    This time, you should see the name of the branch you are on. You should also know that you are ahead of the origin of that branch by one commit. The 'Origin' is the branch on the server. Your local copy contains one change that is not yet on the server copy.
+  </aside>
+</section>

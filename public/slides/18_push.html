@@ -1,0 +1,54 @@
+<!-- Slide 55 -->
+<section>
+  <h5>Let's <span class="u-orange">push!</span></h5>
+  <div>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git push
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Error!</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          fatal: The current branch test-branch has no upstream branch.
+          To push the current branch and set the remote as upstream, use
+
+            git push --set-upstream origin [BRANCHNAME]
+        </code>
+      </pre>
+    </div>
+  </div>
+  <aside class="notes">
+    Let's push these changes to the server using git push.
+    <br><br>
+    Uh-oh! We got an error, but why?
+    <br><br>
+    We created the branch in our local working repository. Your local branches aren’t automatically synchronized to the remotes server — you have to push the branches you want to share explicitly.
+  </aside>
+</section>
+<!-- Slide 56 -->
+<section>
+  <h5>Set Origin</h5>
+  <div>
+    <pre>
+      <code data-trim data-noescape>
+          $ git push --set-upstream origin [BRANCHNAME]
+      </code>
+    </pre>
+    <pre>
+      <code data-trim data-noescape>
+          Branch [BRANCHNAME] set up to track remote branch test-branch from origin
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Luckily, Git gives you the command needed to do this. Use the 'set origin' command to push this local branch to the remote server.
+    <br><br>
+    You should see a flurry of activity ending with the following message: "Branch [BRANCHNAME] set up to track remote branch test-branch from the origin."
+  </aside>
+</section>

@@ -1,0 +1,54 @@
+<!-- Slide 48 -->
+<section>
+  <h3>Cloning</h3>
+  <img src="images/clone-repo.png" alt="Clone Repo" style="max-height: 400px; width: auto">
+  <aside class="notes">
+    Now that we have our copy of the project, we can work on it locally. To work on a git project locally (from your computer), you will need to clone it.
+    <br><br>
+    To clone the project, you can copy a link to the Git repository through an SSH or an HTTPS protocol. SSH is easier to use after it's been set up, luckily we have already done that!
+    <br><br>
+    While you are at the Project tab, select HTTPS or SSH from the drop-down menu and copy the link using the 'Copy to clipboard' button (you'll have to paste it on your shell in the next step).
+  </aside>
+</section>
+<!-- Slide 49 -->
+<section>
+  <h3>Clone<span class="u-orange"> locally</span></h3>
+  <div>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ git clone [SSH-ADDRESS]
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Check clone</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ ls
+        </code>
+      </pre>
+    </div>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Move into the directory</h5>
+    <div>
+      <pre>
+        <code data-trim data-noescape>
+          $ cd [NAME-OF-PROJECT]
+        </code>
+      </pre>
+    </div>
+  </div>
+  <aside class="notes">
+    In your terminal, get yourself into the directory you want to clone the repo. The directory you choose is up to you; you can clone it into a unique folder you create, your desktop, etc. Just make sure you know where you are cloning it and will be able to find it quickly again.
+    <br><br>
+    Once you have navigated to the place you want to clone the file, clone it locally using the git clone command. This will immediately create a clone of the project on your computer.
+    <br><br>
+    Once complete, run the list command (ls) to make sure you see the clone.
+    <br><br>
+    Then, move inside your cloned repo by using the change directories (cd) command.
+  </aside>
+</section>

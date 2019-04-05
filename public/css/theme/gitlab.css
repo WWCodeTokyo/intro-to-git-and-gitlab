@@ -208,6 +208,10 @@ body {
 .reveal small * {
   vertical-align: top; }
 
+.reveal .large {
+  font-size: 1.6em;
+  line-height: 1.6em; }
+
 /*********************************************
  * LINKS
  *********************************************/
@@ -231,7 +235,7 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px; 
+  margin: 15px 0px;
   border: 1px solid #007a7c; }
 
 .reveal section img.plain {

@@ -1,0 +1,111 @@
+<!-- Slide 17 -->
+<section>
+  <h5>Let's check the status of our <span class="u-orange">Git Repo</span>.</h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ git status
+    </code>
+  </pre>
+
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        On branch master
+
+        No commits yet
+
+        nothing to commit (create/copy files and use "git add" to track)
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    You can run the 'git status' command to check the status of your repo.
+    <br><br>
+    *INSTRUCTOR: ask the class to run it and then ask what they see.
+    <br><br>
+    *They should see "On branch Master / Initial commit/nothing to commit (create/copy files and use "git add" to track."
+  </aside>
+</section>
+
+<!-- Slide 18 -->
+<section>
+  <h5>Let's create a file and add it to<span class="u-orange"> your repo</span>.</h5>
+    <pre>
+    <code data-trim data-noescape>
+      $ touch my-file.txt
+    </code>
+  </pre>
+  <div class="fragment fade-left">
+    <h5>View the file by running the <span class="u-orange">list command</span>.</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ ls
+      </code>
+    </pre>
+  </div>
+  <div class="fragment fade-left">
+    <h5>Tell Git to <span class="u-orange">track</span> our file.</h5>
+    <pre>
+      <code data-trim data-noescape>
+        $ git add my-file.txt
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    To create an empty text file, enter the 'touch' command followed by the name you want to give the file.
+    <br><br>
+    Then run the ls command to see that the file was created. Running this command should output the name of the file in the command line.
+    <br><br>
+    Now, let's tell Git to track this new file. Do this by typing in the 'git add' command followed by the name of the file you just created. This command tells Git to add it to the tracked files.
+    <br><br>
+    *INSTRUCTOR: Tell the class to run the 'git status' command and tell you what they see.(** they should see, Initial commit / Changes to be committed: . . .)
+    <br><br>
+    Congrats! Your file is now being tracked by Git!
+  </aside>
+</section>
+
+<section>
+  <h5>Now check your repo <span class="u-orange">status</span></h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ git status
+    </code>
+  </pre>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        On branch master
+
+        No commits yet
+
+        Changes to be committed:
+
+          new file:   my-file.txt
+      </code>
+    </pre>
+  </div>
+</section>
+
+<!-- Slide 19 -->
+<section>
+  <h5>Time to <span class="u-orange">commit</span>!</h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ git commit -m "First commit"
+    </code>
+  </pre>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        [master (root-commit) 4315371] First commit
+        1 file changed, 0 insertions(+), 0 deletions(-)
+        create mode 100644 my-file.txt
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    Your file is being tracked, but you have not committed the changes to memory. To commit the file, run the 'git commit -m' command. It is important that you add a description of your commit in quotes after the '-m' (m stands for message).
+    <br><br>
+    If not, the command line will open VIM. Escaping VIM, the difficulty of escaping VIM that is a standard development joke. (** You may want to cover how to escape VIM ).
+  </aside>
+</section>

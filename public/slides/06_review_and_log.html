@@ -1,0 +1,73 @@
+<!-- Slide 20 -->
+<section>
+  <h3>Phew! That was a lot. <span class="u-orange">Let's review</span> !</h3>
+  <aside class="notes">
+    *INSTRUCTOR: Now is an excellent time to make sure everyone is caught up and in the same place. Reassure anyone that isn't and get them caught up before proceeding to the next slide.
+  </aside>
+</section>
+
+<!-- Slide 21 -->
+<section>
+  <table>
+    <tr class="fragment fade-left">
+      <td class="u-orange">
+        <h4><a href="https://git-scm.com/docs/git-init">init</a></h4></td>
+      <td><p>Create an empty Git repository or reinitialize an existing one</p></td>
+    </tr>
+    <tr class="fragment fade-left">
+      <td class="u-orange">
+        <h4><a href="https://git-scm.com/docs/git-config">config</a></h4></td>
+      <td><p>List and set options for the global Git installation or only the local repo</p></td>
+    </tr>
+    <tr class="fragment fade-left">
+      <td class="u-orange"><h4><a href=
+        "https://git-scm.com/docs/git-status">status</a></h4></td>
+      <td><p>Show the working tree status</p></td>
+    </tr>
+    <tr class="fragment fade-left">
+      <td class="u-orange"><h4><a href=
+        "https://git-scm.com/docs/git-add">add</a></h4></td>
+      <td><p>Adds the file changes to the index</p></td>
+    </tr>
+    <tr class="fragment fade-left">
+      <td class="u-orange"><h4><a href=
+        "https://git-scm.com/docs/git-commit">commit</a></h4></td>
+      <td><p>Save some changes to the repo with a description message</p></td>
+    </tr>
+  </table>
+  <aside class="notes">
+    Review each of these commands. Remind the class that these are git commands, different from bash commands. They must put 'git' before each one of the commands, and they will only work in a Git repository.
+    <br><br>
+    ** Git Add - This adds the files to the repo to be tracked AND stages it. Staging is different than adding. Staging tells git to track the current state of the file.
+    <br><br>
+      ** Git Commit  - A commit saves the changes made to the file, not the file itself. Each commit has a 'hash' so we can track which changes were committed when and by whom.
+      <br><br>
+    ** What is a hash? - Git uses SHA-1 hashes. An SHA-1 is an algorithm that takes some data as input and generates a unique 40 character string from it. That means each commit is 100% unique.
+  </aside>
+</section>
+
+
+<!-- Slide 22 -->
+<section>
+  <h5>Let's look at what <span class="u-orange">we've done</span></h5>
+  <pre>
+    <code data-trim data-noescape>
+      $ git log
+    </code>
+  </pre>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+      commit [UNIQUE HASH] (HEAD -> master)
+      Author: Your Name <you@email.com>
+      Date:   [DATE]
+
+        First commit
+      (END)
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    The log command will show you the commit logs. You should see something that looks like this.
+  </aside>
+</section>

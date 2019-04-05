@@ -1,0 +1,54 @@
+<!-- Slide 25 -->
+<section>
+  <h5>Let's make <span class="u-orange">a commited mistake</span> .</h5>
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        $ git add my-file.txt
+        $ git commit -m "some changes"
+      </code>
+    </pre>
+  </div>
+  <aside class="notes">
+    What happens if you committed the file already? Remember, once a file is committed, it is logged in the index.
+    <br><br>
+    Let's give it a try. Open your text file again and add some text.
+    <br><br>
+    Next, add it using 'git add.'
+    <br><br>
+    Next, commit it using 'git commit.'
+    <br><br>
+    Whoops! We didn't want to add that. How do we fix it?
+  </aside>
+</section>
+
+<section>
+  <h5>Let's <span class="u-orange">fix it</span> !</h5>
+  <div class="fragment fade-left">
+    <img src="images/git-log.png" height="300">
+  </div>
+
+  <div class="fragment fade-left">
+    <pre>
+      <code data-trim data-noescape>
+        $ git reset [HASH]
+        or
+        $ git reset --hard [HASH]
+      </code>
+    </pre>
+  </div>
+
+  <aside class="notes">
+      <br><br>
+      Run the command, 'git log.' This command will output the hash# belonging to the latest commits. Remember the hash? It is the unique 40 character # Git gives to each commit. It's about to come in very handy!
+      <br><br>
+      Copy the commit Hash for the commit BEFORE the bad one we just made, then type in  ':q' to exit the log.
+      <br><br>
+      Type in the command 'git reset' followed by the hash number you just copied. You should immediately see the output on the command line stating: 'On branch master nothing to commit, working tree clean.'
+      <br><br>
+      What just happened? Well, we had already committed the change which meant that we could not simply checkout the file to undo the change.
+      We had to go a step further and tell Git to reset the last commit. This command rewinds your repository’s history all the way back to the specified hash.
+      git reset preserves the working directory, the commits are gone, but the contents are still on disk.
+      Revert is the safest option, but sometimes, you’ll want to “undo” the commits and the changes in one move—that’s what --hard does.
+  </aside>
+</section>
